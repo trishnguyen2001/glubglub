@@ -193,7 +193,7 @@ FOREIGN KEY (amenityID) REFERENCES Amenity(amenityID) ON DELETE CASCADE
 INSERT INTO Giftshop(amenityID, price_range) VALUES ('A16', '$$');
 
 CREATE TABLE Employee(
-employeeID VARCHAR2(10) PRIMARY KEY,
+employeeID VARCHAR2(3) PRIMARY KEY,
 eName VARCHAR2(64) NOT NULL,
 occupation  VARCHAR2(100) NOT NULL
 );
