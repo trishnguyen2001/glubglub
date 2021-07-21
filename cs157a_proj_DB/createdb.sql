@@ -132,13 +132,6 @@ INSERT INTO AnimalInsideZone(general_name, habitatID, zoneID) VALUES ('Chilean C
 INSERT INTO AnimalInsideZone(general_name, habitatID, zoneID) VALUES ('John Dory', 'H34', 'Z6');
 INSERT INTO AnimalInsideZone(general_name, habitatID, zoneID) VALUES ('Pacific Halibut', 'H35', 'Z6');
 
-
-
-
-
-
-
-
 CREATE TABLE Amenity(
 amenityID VARCHAR2(3) PRIMARY KEY,
 location VARCHAR2(3) NOT NULL,
@@ -162,8 +155,6 @@ INSERT INTO Amenity(amenityID, location) VALUES ('A14', 'Z6');
 INSERT INTO Amenity(amenityID, location) VALUES ('A15', 'Z6');
 INSERT INTO Amenity(amenityID, location) VALUES ('A16', 'Z6');
 
-
-
 CREATE TABLE Restroom (
 amenityID VARCHAR2(3) PRIMARY KEY,
 gender VARCHAR(1),
@@ -183,8 +174,8 @@ INSERT INTO Restroom(amenityID, gender) VALUES ('A10', 'F');
 
 CREATE TABLE Restaurant (
 amenityID VARCHAR2(3) PRIMARY KEY,
-rname VARCHAR(50),
-cuisine VARCHAR(20),
+rName VARCHAR(50),
+cuisine VARCHAR(30),
 FOREIGN KEY (amenityID) REFERENCES Amenity(amenityID) ON DELETE CASCADE
 );
 INSERT INTO Restaurant(amenityID, rname, cuisine) VALUES ('A11', 'Seaside Cafe','Coffee');
@@ -201,52 +192,52 @@ FOREIGN KEY (amenityID) REFERENCES Amenity(amenityID) ON DELETE CASCADE
 );
 INSERT INTO Giftshop(amenityID, price_range) VALUES ('A16', '$$');
 
-CREATE TABLE EMPLOYEE(
-EMPLOYEE_ID VARCHAR2(10) PRIMARY KEY,
-ENAME VARCHAR2(64) NOT NULL,
-OCCUPATION  VARCHAR2(100) NOT NULL
+CREATE TABLE Employee(
+employeeID VARCHAR2(10) PRIMARY KEY,
+eName VARCHAR2(64) NOT NULL,
+occupation  VARCHAR2(100) NOT NULL
 );
+INSERT INTO Employee(employeeID, eName, occupation) VALUES('E1','Michael', 'caretaker');
+INSERT INTO Employee(employeeID, eName, occupation) VALUES('E2','Holly', 'caretaker');
+INSERT INTO Employee(employeeID, eName, occupation) VALUES('E3','Jim', 'caretaker');
+INSERT INTO Employee(employeeID, eName, occupation) VALUES('E4','Robin', 'caretaker');
+INSERT INTO Employee(employeeID, eName, occupation) VALUES('E5','Victoria', 'tour guide');
+INSERT INTO Employee(employeeID, eName, occupation) VALUES('E6','Stella', 'tour guide');
+INSERT INTO Employee(employeeID, eName, occupation) VALUES('E7','Neal', 'tour guide');
+INSERT INTO Employee(employeeID, eName, occupation) VALUES('E8','Jack', 'caretaker');
+INSERT INTO Employee(employeeID, eName, occupation) VALUES('E9','Nick', 'tour guide');
+INSERT INTO Employee(employeeID, eName, occupation) VALUES('E10','Jess', 'manager');
+INSERT INTO Employee(employeeID, eName, occupation) VALUES('E11','Jessica', 'manager');
+INSERT INTO Employee(employeeID, eName, occupation) VALUES('E12','Nat', 'tour guide');
+INSERT INTO Employee(employeeID, eName, occupation) VALUES('E13','Tom', 'tour guide');
+INSERT INTO Employee(employeeID, eName, occupation) VALUES('E14','Mark', 'caretaker');
 
-INSERT INTO EMPLOYEE VALUE('E1','Michael', 'caretaker');
-INSERT INTO EMPLOYEE VALUE('E2','Holly', 'caretaker');
-INSERT INTO EMPLOYEE VALUE('E3','Jim', 'caretaker');
-INSERT INTO EMPLOYEE VALUE('E4','Robin', 'caretaker');
-INSERT INTO EMPLOYEE VALUE('E5','Victoria', 'tour guide');
-INSERT INTO EMPLOYEE VALUE('E6','Stella', 'tour guide');
-INSERT INTO EMPLOYEE VALUE('E7','Neal', 'tour guide');
-INSERT INTO EMPLOYEE VALUE('E8','Jack', 'caretaker');
-INSERT INTO EMPLOYEE VALUE('E9','Nick', 'tour guide');
-INSERT INTO EMPLOYEE VALUE('E10','Jess', 'manager');
-INSERT INTO EMPLOYEE VALUE('E11','Jessica', 'manager');
-INSERT INTO EMPLOYEE VALUE('E12','Nat', 'tour guide');
-INSERT INTO EMPLOYEE VALUE('E13','Tom', 'tour guide');
-INSERT INTO EMPLOYEE VALUE('E14','Mark', 'caretaker');
-
-CREATE TABLE TOURGUIDE(
-TOUR_ID VARCHAR2(10) PRIMARY KEY
-EMPLOYEE_ID VARCHAR2(10) NOT NULL
+CREATE TABLE TourGuide(
+tourID VARCHAR2(3), 
+employeeID VARCHAR2(3),
+PRIMARY KEY(tourID, employeeID),
+FOREIGN KEY(tourID) REFERENCES Tour(tourID) ON DELETE CASCADE,
+FOREIGN KEY(employeeID) REFERENCES Employee(employeeID) ON DELETE CASCADE
 );
+INSERT INTO TourGuide(tourID, employeeID) VALUES('T1','E1');
+INSERT INTO TourGuide(tourID, employeeID) VALUES('T2','E2');
+INSERT INTO TourGuide(tourID, employeeID) VALUES('T3','E3');
+INSERT INTO TourGuide(tourID, employeeID) VALUES('T1','E9');
+INSERT INTO TourGuide(tourID, employeeID) VALUES('T2','E14');
+INSERT INTO TourGuide(tourID, employeeID) VALUES('T3','E12');
 
-INSERT INTO TOURGUIDE VALUE('T1','E1');
-INSERT INTO TOURGUIDE VALUE('T2','E2');
-INSERT INTO TOURGUIDE VALUE('T3','E3');
-INSERT INTO TOURGUIDE VALUE('T1','E9');
-INSERT INTO TOURGUIDE VALUE('T2','E14');
-INSERT INTO TOURGUIDE VALUE('T3','E12');
-
-CREATE TABLE SHOW_PRESENTER(
-LIVEHOW_ID VARCHAR2(10) PRIMARY KEY
-EMPLOYEE_ID VARCHAR2(10) NOT NULL
+CREATE TABLE ShowPresenter(
+liveshowID VARCHAR2(3),
+employeeID VARCHAR2(3),
+PRIMARY KEY(liveshowID, employeeID),
+FOREIGN KEY(liveshowID) REFERENCES LiveShow(liveshowID) ON DELETE CASCADE,
+FOREIGN KEY(employeeID) REFERENCES Employee(employeeID) ON DELETE CASCADE
 );
-
-INSERT INTO SHOW_PRESENTER VALUE('LS1','E1');
-INSERT INTO SHOW_PRESENTER VALUE('LS1','E2');
-INSERT INTO SHOW_PRESENTER VALUE('LS2','E3');
-INSERT INTO SHOW_PRESENTER VALUE('LS2','E4');
-INSERT INTO SHOW_PRESENTER VALUE('LS3','E8');
-INSERT INTO SHOW_PRESENTER VALUE('LS3','E15');
-
-
-
+INSERT INTO ShowPresenter(liveshowID, employeeID) VALUES('LS1','E1');
+INSERT INTO ShowPresenter(liveshowID, employeeID) VALUES('LS1','E2');
+INSERT INTO ShowPresenter(liveshowID, employeeID) VALUES('LS2','E3');
+INSERT INTO ShowPresenter(liveshowID, employeeID) VALUES('LS2','E4');
+INSERT INTO ShowPresenter(liveshowID, employeeID) VALUES('LS3','E8');
+INSERT INTO ShowPresenter(liveshowID, employeeID) VALUES('LS3','E15');
 
 COMMIT WORK;

@@ -1,3 +1,6 @@
+DROP TABLE Employee;
+DROP TABLE TourGuide;
+DROP TABLE ShowPresenter;
 DROP TABLE Giftshop;
 DROP TABLE Restaurant;
 DROP TABLE Restroom;
