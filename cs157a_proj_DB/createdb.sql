@@ -240,4 +240,48 @@ INSERT INTO ShowPresenter(liveshowID, employeeID) VALUES('LS2','E4');
 INSERT INTO ShowPresenter(liveshowID, employeeID) VALUES('LS3','E8');
 INSERT INTO ShowPresenter(liveshowID, employeeID) VALUES('LS3','E15');
 
+CREATE TABLE Visitor(
+visitorID VARCHAR2(2),
+vName VARCHAR2(10)
+);
+INSERT INTO Visitor(visitorID, vName) VALUES('V1','John');
+INSERT INTO Visitor(visitorID, vName) VALUES('V2','Melissa');
+INSERT INTO Visitor(visitorID, vName) VALUES('V3','Dave');
+INSERT INTO Visitor(visitorID, vName) VALUES('V4','Daisey');
+INSERT INTO Visitor(visitorID, vName) VALUES('V5','Aaron');
+INSERT INTO Visitor(visitorID, vName) VALUES('V6','Eva');
+INSERT INTO Visitor(visitorID, vName) VALUES('V7','Eddie');
+INSERT INTO Visitor(visitorID, vName) VALUES('V8','Genie');
+INSERT INTO Visitor(visitorID, vName) VALUES('V9','Gabe');
+INSERT INTO Visitor(visitorID, vName) VALUES('V10','Pam');
+INSERT INTO Visitor(visitorID, vName) VALUES('V11','Jack');
+INSERT INTO Visitor(visitorID, vName) VALUES('V12','Angela');
+INSERT INTO Visitor(visitorID, vName) VALUES('V13','Susan');
+INSERT INTO Visitor(visitorID, vName) VALUES('V14','Jayden');
+INSERT INTO Visitor(visitorID, vName) VALUES('V15','Hannah');
+INSERT INTO Visitor(visitorID, vName) VALUES('V16','Edward');
+INSERT INTO Visitor(visitorID, vName) VALUES('V17','Jen');
+INSERT INTO Visitor(visitorID, vName) VALUES('V18','Joey');
+INSERT INTO Visitor(visitorID, vName) VALUES('V19','Monica');
+INSERT INTO Visitor(visitorID, vName) VALUES('V20','Ross');
+
+CREATE TABLE VisitorTags(
+	visitorID VARCHAR2(2),
+	general_name VARCHAR2(50),
+	tag_description VARCHAR2(20),
+	FOREIGN KEY(visitorID) REFERENCES Visitor(visitorID) ON DELETE CASCADE,
+	FOREIGN KEY(general_name) REFERENCES Animal(general_name) ON DELETE CASCADE
+);
+
+INSERT INTO VisitorTags(visitorID, general_name, tag_description) VALUES('V1', 'Blue Tang', 'adorable');
+INSERT INTO VisitorTags(visitorID, general_name, tag_description) VALUES('V3', 'Sea Otter', 'adorable');
+INSERT INTO VisitorTags(visitorID, general_name, tag_description) VALUES('V5', 'Whale Shark', 'scary');
+INSERT INTO VisitorTags(visitorID, general_name, tag_description) VALUES('V6', 'Red Lionfish', 'unique');
+INSERT INTO VisitorTags(visitorID, general_name, tag_description) VALUES('V7', 'Green Sea Turtle', 'unique');
+INSERT INTO VisitorTags(visitorID, general_name, tag_description) VALUES('V5', 'Banded Butterflyfish', 'adorable');
+INSERT INTO VisitorTags(visitorID, general_name, tag_description) VALUES('V10', 'Galapagos Penguin', 'cute');
+INSERT INTO VisitorTags(visitorID, general_name, tag_description) VALUES('V13', 'Common Dolphinfish', 'cute');
+INSERT INTO VisitorTags(visitorID, general_name, tag_description) VALUES('V16', 'Great White Shark', 'cool');
+INSERT INTO VisitorTags(visitorID, general_name, tag_description) VALUES('V12', 'Bat Ray', 'cool');
+
 COMMIT WORK;
