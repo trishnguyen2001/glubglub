@@ -258,7 +258,7 @@ INSERT INTO ShowPresenter(liveshowID, employeeID) VALUES('LS2','E4');
 INSERT INTO ShowPresenter(liveshowID, employeeID) VALUES('LS3','E8');
 INSERT INTO ShowPresenter(liveshowID, employeeID) VALUES('LS3','E15');
 
-CREATE TALBE AnimalPerformsInShow (
+CREATE TABLE AnimalPerformsInShow (
 liveshowID VARCHAR(3),
 general_name VARCHAR(50),
 PRIMARY KEY (liveshowID, general_name),
