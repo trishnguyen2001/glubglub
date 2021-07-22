@@ -11,3 +11,7 @@ DROP TABLE Zone;
 DROP TABLE Animal;
 DROP TABLE Visitor;
 DROP TABLE VisitorTags;
+DROP TABLE Tour;
+DROP TABLE LiveShow;
+DROP TABLE AnimalPerformsInShow;
+DROP TABLE ZoneTours; 
