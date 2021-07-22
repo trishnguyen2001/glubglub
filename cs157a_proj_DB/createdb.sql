@@ -289,7 +289,7 @@ INSERT INTO ZoneTours(tourID, zoneID) VALUES ('T3', 'Z3');
 INSERT INTO ZoneTours(tourID, zoneID) VALUES ('T3', 'Z4');
 
 CREATE TABLE Visitor(
-visitorID VARCHAR2(2),
+visitorID VARCHAR2(3) PRIMARY KEY,
 vName VARCHAR2(10)
 );
 INSERT INTO Visitor(visitorID, vName) VALUES('V1','John');
@@ -314,7 +314,7 @@ INSERT INTO Visitor(visitorID, vName) VALUES('V19','Monica');
 INSERT INTO Visitor(visitorID, vName) VALUES('V20','Ross');
 
 CREATE TABLE VisitorTags(
-	visitorID VARCHAR2(2),
+	visitorID VARCHAR2(3) PRIMARY KEY,
 	general_name VARCHAR2(50),
 	tag_description VARCHAR2(20),
 	FOREIGN KEY(visitorID) REFERENCES Visitor(visitorID) ON DELETE CASCADE,
