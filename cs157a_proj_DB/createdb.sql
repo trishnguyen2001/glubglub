@@ -214,7 +214,7 @@ INSERT INTO Employee(employeeID, eName, occupation) VALUES('E14','Mark', 'careta
 
 CREATE TABLE Tour (
 tourID VARCHAR(2) PRIMARY KEY,
-tName VARCHAR(20) NOT NULL,
+tName VARCHAR(30) NOT NULL,
 time VARCHAR(7) NOT NULL
 );
 INSERT INTO Tour(tourID, tName, time) VALUES ('T1', 'Fish Around the World', '10:00AM');
@@ -256,7 +256,7 @@ INSERT INTO ShowPresenter(liveshowID, employeeID) VALUES('LS1','E2');
 INSERT INTO ShowPresenter(liveshowID, employeeID) VALUES('LS2','E3');
 INSERT INTO ShowPresenter(liveshowID, employeeID) VALUES('LS2','E4');
 INSERT INTO ShowPresenter(liveshowID, employeeID) VALUES('LS3','E8');
-INSERT INTO ShowPresenter(liveshowID, employeeID) VALUES('LS3','E15');
+INSERT INTO ShowPresenter(liveshowID, employeeID) VALUES('LS3','E14');
 
 CREATE TABLE AnimalPerformsInShow (
 liveshowID VARCHAR(3),
@@ -270,8 +270,8 @@ INSERT INTO AnimalPerformsInShow(liveshowID, general_name) VALUES ('LS2', 'Bat R
 INSERT INTO AnimalPerformsInShow(liveshowID, general_name) VALUES ('LS3', 'Common Dolphinfish');
 
 CREATE TABLE ZoneTours (
-tourID VARCHAR(2),
-zoneID VARCHAR(2),
+tourID VARCHAR(3),
+zoneID VARCHAR(3),
 PRIMARY KEY (tourID, zoneID),
 FOREIGN KEY (tourID) REFERENCES Tour(tourID) ON DELETE CASCADE,
 FOREIGN KEY (zoneID) REFERENCES Zone(zoneID) ON DELETE CASCADE
@@ -314,11 +314,12 @@ INSERT INTO Visitor(visitorID, vName) VALUES('V19','Monica');
 INSERT INTO Visitor(visitorID, vName) VALUES('V20','Ross');
 
 CREATE TABLE VisitorTags(
-	visitorID VARCHAR2(3) PRIMARY KEY,
-	general_name VARCHAR2(50),
-	tag_description VARCHAR2(20),
-	FOREIGN KEY(visitorID) REFERENCES Visitor(visitorID) ON DELETE CASCADE,
-	FOREIGN KEY(general_name) REFERENCES Animal(general_name) ON DELETE CASCADE
+visitorID VARCHAR2(3),
+general_name VARCHAR2(50),
+tag_description VARCHAR2(20),
+PRIMARY KEY(visitorID, tag_description),
+FOREIGN KEY(visitorID) REFERENCES Visitor(visitorID) ON DELETE CASCADE,
+FOREIGN KEY(general_name) REFERENCES Animal(general_name) ON DELETE CASCADE
 );
 
 INSERT INTO VisitorTags(visitorID, general_name, tag_description) VALUES('V1', 'Blue Tang', 'adorable');
