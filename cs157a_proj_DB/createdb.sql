@@ -215,20 +215,20 @@ INSERT INTO Employee(employeeID, eName, occupation) VALUES('E14','Mark', 'careta
 CREATE TABLE Tour (
 tourID VARCHAR(2) PRIMARY KEY,
 tName VARCHAR(30) NOT NULL,
-time VARCHAR(7) NOT NULL
+tourTime VARCHAR(7) NOT NULL
 );
-INSERT INTO Tour(tourID, tName, time) VALUES ('T1', 'Fish Around the World', '10:00AM');
-INSERT INTO Tour(tourID, tName, time) VALUES ('T2', 'Close to Shore', '12:00PM');
-INSERT INTO Tour(tourID, tName, time) VALUES ('T3', 'Shark Tank', '3:00PM');
+INSERT INTO Tour(tourID, tName, tourTime) VALUES ('T1', 'Fish Around the World', '10:00AM');
+INSERT INTO Tour(tourID, tName, tourTime) VALUES ('T2', 'Close to Shore', '12:00PM');
+INSERT INTO Tour(tourID, tName, tourTime) VALUES ('T3', 'Shark Tank', '3:00PM');
 
 CREATE TABLE LiveShow (
 liveshowID VARCHAR(3) PRIMARY KEY,
 sName VARCHAR(20) NOT NULL,
-time VARCHAR(7) NOT NULL
+showTime VARCHAR(7) NOT NULL
 );
-INSERT INTO LiveShow(liveshowID, sName, time) VALUES ('LS1', 'Penguin Feeding', '1:00PM');
-INSERT INTO LiveShow(liveshowID, sName, time) VALUES ('LS2', 'Stingray Petting Zoo', '2:00PM');
-INSERT INTO LiveShow(liveshowID, sName, time) VALUES ('LS3', 'Dolphin Show', '3:00PM');
+INSERT INTO LiveShow(liveshowID, sName, showTime) VALUES ('LS1', 'Penguin Feeding', '1:00PM');
+INSERT INTO LiveShow(liveshowID, sName, showTime) VALUES ('LS2', 'Stingray Petting Zoo', '2:00PM');
+INSERT INTO LiveShow(liveshowID, sName, showTime) VALUES ('LS3', 'Dolphin Show', '3:00PM');
 
 CREATE TABLE TourGuide(
 tourID VARCHAR2(3), 
