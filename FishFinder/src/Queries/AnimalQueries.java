@@ -35,6 +35,7 @@ public class AnimalQueries{
 			System.out.println("EXECUTING: empty zoneQuery");
 			return "SELECT A.general_name FROM Animal A";	
 		}
+		zone = zone.toUpperCase();
 		zone = zone.replaceAll("//s+", "");
 		return "SELECT A.general_name FROM Animal A, AnimalInsideZone AIZ " +  
 				"WHERE AIZ.zoneID LIKE '%" + zone + "%' AND A.general_name = AIZ.general_name";	
@@ -48,9 +49,10 @@ public class AnimalQueries{
 			System.out.println("EXECUTING: empty habitatQuery");
 			return "SELECT A.general_name FROM Animal A";	
 		}
+		habitat = habitat.toUpperCase();
 		habitat = habitat.replaceAll(" ", "");
 		return "SELECT A.general_name FROM Animal A, AnimalInsideZone AIZ " +  
-				"WHERE AIZ.habitatID LIKE '%" + habitat + "%' AND A.general_name = AIZ.general_name";	
+				"WHERE AIZ.habitatID='" + habitat + "' AND A.general_name = AIZ.general_name";	
 	}
 	
 	public String tagQuery(String tag){
@@ -60,10 +62,12 @@ public class AnimalQueries{
 			System.out.println("EXECUTING: empty tagQuery");
 			return "SELECT A.general_name FROM Animal A";	
 		}
+		tag = tag.toLowerCase();
 		tag = tag.replaceAll(" ", "");
 		return "SELECT A.general_name FROM Animal A, VisitorTags VT " +  
 				"WHERE VT.tag_description LIKE '%" + tag + "%' AND VT.general_name = A.general_name";	
 	}
+	
 	
 //	public ArrayList<String> tags(String genName) throws SQLException{
 //		ResultSet rs = stmt.executeQuery(
