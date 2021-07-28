@@ -19,7 +19,7 @@
 		<b>Zone: </b> <input type="text" name="zone"> <br> <br>
 		<b>Habitat: </b> <input type="text" name="habitat"><br> <br>
 		<b>Name: </b> <input type="text" name="animal_name"><br>
-		<br> <b>Tags: </b> <input type="text" name="tags"><br>
+		<br> <b>Tags: </b> <input type="text" name="tag"><br>
 		<br> <input type="submit" value="Submit">
 	</form>
 
