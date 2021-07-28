@@ -1,4 +1,4 @@
-package com.koradia;
+package Queries;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
