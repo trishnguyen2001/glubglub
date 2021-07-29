@@ -367,4 +367,28 @@ INSERT INTO VisitorTags(visitorID, general_name, tag_description) VALUES ('V2', 
 INSERT INTO VisitorTags(visitorID, general_name, tag_description) VALUES ('V1', 'JOHN DORY', 'UNIQUE');
 INSERT INTO VisitorTags(visitorID, general_name, tag_description) VALUES ('V4', 'PACIFIC HALIBUT', 'COOL');
 
+CREATE TABLE AmenityType(
+    amenityID VARCHAR(3) PRIMARY KEY,
+    Amenity_type VARCHAR(25) NOT NULL,
+    FOREIGN KEY (amenityID) REFERENCES Amenity(amenityID) ON DELETE CASCADE
+);
+
+INSERT INTO AmenityType(amenityID, Amenity_type) VALUES ('A1','Restroom');
+INSERT INTO AmenityType(amenityID, Amenity_type) VALUES ('A2','Restroom');
+INSERT INTO AmenityType(amenityID, Amenity_type) VALUES ('A3','Restroom');
+INSERT INTO AmenityType(amenityID, Amenity_type) VALUES ('A4','Restroom');
+INSERT INTO AmenityType(amenityID, Amenity_type) VALUES ('A5','Restroom');
+INSERT INTO AmenityType(amenityID, Amenity_type) VALUES ('A6','Restroom');
+INSERT INTO AmenityType(amenityID, Amenity_type) VALUES ('A7','Restroom');
+INSERT INTO AmenityType(amenityID, Amenity_type) VALUES ('A8','Restroom');
+INSERT INTO AmenityType(amenityID, Amenity_type) VALUES ('A9','Restroom');
+INSERT INTO AmenityType(amenityID, Amenity_type) VALUES ('A10','Restroom');
+INSERT INTO AmenityType(amenityID, Amenity_type) VALUES ('A11','Restaurant');
+INSERT INTO AmenityType(amenityID, Amenity_type) VALUES ('A12','Restaurant');
+INSERT INTO AmenityType(amenityID, Amenity_type) VALUES ('A13','Restaurant');
+INSERT INTO AmenityType(amenityID, Amenity_type) VALUES ('A14','Restaurant');
+INSERT INTO AmenityType(amenityID, Amenity_type) VALUES ('A15','Restaurant');
+INSERT INTO AmenityType(amenityID, Amenity_type) VALUES ('A16','Giftshop');
+INSERT INTO AmenityType(amenityID, Amenity_type) VALUES ('A17','Restaurant');
+
 COMMIT WORK;
