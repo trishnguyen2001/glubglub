@@ -10,7 +10,7 @@ public class AnimalQueries{
 		public AnimalQueries() {
 			try {
 				Class.forName("oracle.jdbc.driver.OracleDriver");
-				con = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe", "system", "Oracle.com0709");
+				con = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe", "system", "newOracle");
 				stmt = con.createStatement();
 
 			} catch (Exception e) {
@@ -25,6 +25,9 @@ public class AnimalQueries{
 				System.out.println("EXECUTING: empty genNameQuery");
 				return "SELECT A.general_name FROM Animal A";	
 			}
+			
+			genName = genName.toUpperCase();
+			
 			return "SELECT A.general_name FROM Animal A WHERE A.general_name LIKE '%" + genName + "%'";	
 		}	
 		
@@ -66,6 +69,46 @@ public class AnimalQueries{
 			return "SELECT A.general_name FROM Animal A, VisitorTags VT " +  
 					"WHERE VT.tag_description LIKE '%" + tag + "%' AND VT.general_name = A.general_name";	
 		}
+		
+		
+//		public ArrayList<String> tags(String genName) throws SQLException{
+//			ResultSet rs = stmt.executeQuery(
+//					"SELECT V.vName, VT.tag_description " + 
+//					"FROM Animal A, Visitor V, VisitorTags VT " + 
+//					"WHERE A.general_name = VT.general_name AND V.visitorID = VT.visitorID AND A.general_name LIKE '%"+ genName +"%'"
+//					);
+//			ArrayList<String> tags = new ArrayList<>();
+//			int counter = 0;
+//			while(rs.next()) {
+//				System.out.println("rs " + counter);
+//				tags.add("'" + rs.getString(1) + "'   - " + rs.getString(2));
+//				counter++; 
+//			}
+//			System.out.println("AnimalQueries: tags: " + tags.toString());
+//			return tags;
+//		}
+		
+//		public ResultSet intersection(String nq, String zq, String hq, String tq) throws SQLException {
+//			return stmt.executeQuery(	"SELECT A.general_name, A.scientific_name, AIZ.habitatID, AIZ.zoneID " + 
+//										"FROM Animal A, AnimalInsideZone AIZ " +
+//										"WHERE A.general_name IN ((" + nq + ") INTERSECT (" + zq + ") INTERSECT (" + hq + ") INTERSECT (" + tq + ")) " +  
+//										"AND A.general_name = AIZ.general_name " +
+//										"ORDER BY 1" 
+//									);
+//		}
+	//	
+//		public ArrayList<String> intersectList(ResultSet rs) throws SQLException{
+//			ArrayList<String> tags = new ArrayList<>();
+//			int counter = 0;
+//			while(rs.next()) {
+//				System.out.println("rs " + counter);
+//				tags.add("'" + rs.getString(1) + "'   - " + rs.getString(2));
+//				counter++; 
+//			}
+//			System.out.println("AnimalQueries: list: " + tags.toString());
+//			return tags;
+//		}
+		
 		
 		public ResultSet intersection(String nq, String zq, String hq, String tq) throws SQLException {
 			return stmt.executeQuery(	"SELECT A.general_name, A.scientific_name, AIZ.habitatID, AIZ.zoneID, V.vName, VT.tag_description " + 
