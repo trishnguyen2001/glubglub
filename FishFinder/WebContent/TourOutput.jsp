@@ -51,10 +51,9 @@
 
 				out.print("<tr>");
 				out.print("<td> " + counter + " </td>"); //result counter
-				//out.print("<td>" + current + "</td>"); 								//FORMATTING: retrieves tour name 
-				out.print("<td>" + rs.getString("tName") + "</td>"); //retrieves tour name
-				out.print("<td>" + rs.getString("time") + "</td>"); //retrieves tour time
-				out.print("<td>" + rs.getString("zoneID") + "</td>"); //retrieves zones passed through
+				out.print("<td>" + rs.getString("Tour_Name") + "</td>"); //retrieves Tour Name
+				out.print("<td>" + rs.getString("Tour_Time") + "</td>"); //retrieves Tour Time
+				out.print("<td>" + rs.getString("Zone_Listing") + "</td></tr>"); // lists all the zones for each Tour
 
 				counter++;
 			}

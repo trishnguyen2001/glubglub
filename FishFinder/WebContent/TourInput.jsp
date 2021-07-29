@@ -36,8 +36,6 @@
 
 		try {
 			int counter = 1;
-			//FORMATTING: 
-			//String current = rs.getString("tName");
 			while (rs.next()) {
 
 				out.print("<tr>");
@@ -45,20 +43,6 @@
 				out.print("<td>" + rs.getString("Tour_Name") + "</td>"); //retrieves Tour Name
 				out.print("<td>" + rs.getString("Tour_Time") + "</td>"); //retrieves Tour Time
 				out.print("<td>" + rs.getString("Zone_Listing") + "</td></tr>"); // lists all the zones for each Tour
-				
-				//FORMATTING: retrieves zones passed through
-				/* out.print("<td>");
-				String next = rs.getString("tName");
-				System.out.println("current = " + current);
-				System.out.println("next = " + next);
-				while(next.equals(current)){
-					out.print(rs.getString("zoneID") + "<br>");
-					current = next;
-					next = rs.getString("tName");
-				}
-				out.print("</td>");  */
-
-				out.print("</tr>");
 
 				counter++;
 			}
