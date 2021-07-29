@@ -61,5 +61,15 @@ public class TourQueries {
 									"ORDER BY T.tourID" 
 								);
 	}
+	
+	public ResultSet tourInputDisplay() throws SQLException {
+	return stmt.executeQuery( "SELECT T.tourid AS TourID, T.tname AS Tour_Name, T.time AS Tour_Time, LISTAGG(zoneID, ', ') WITHIN GROUP (ORDER BY zoneID) AS Zone_Listing "
+			+ "FROM Tour T "
+			+ "LEFT OUTER JOIN ZoneTours ZT "
+			+ "ON T.tourid=ZT.tourid "
+			+ "GROUP BY T.tourid, T.tname, T.time"
+			);
+
+	}
 
 }
