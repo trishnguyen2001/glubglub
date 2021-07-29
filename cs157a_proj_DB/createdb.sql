@@ -178,12 +178,12 @@ rName VARCHAR(50),
 cuisine VARCHAR(30),
 FOREIGN KEY (amenityID) REFERENCES Amenity(amenityID) ON DELETE CASCADE
 );
-INSERT INTO Restaurant(amenityID, rname, cuisine) VALUES ('A11', 'SEASIDE CAFE','COFFEE');
-INSERT INTO Restaurant(amenityID, rname, cuisine) VALUES ('A12', 'TONY''S BAR AND GRILL','AMERICAN CASUAL DINING');
-INSERT INTO Restaurant(amenityID, rname, cuisine) VALUES ('A13', 'STARBUCKS','COFFEE');
-INSERT INTO Restaurant(amenityID, rname, cuisine) VALUES ('A14', 'THE GARDEN THAI','THAI');
-INSERT INTO Restaurant(amenityID, rname, cuisine) VALUES ('A15', 'GUACAMOLE BLISS','MEXICAN');
-INSERT INTO Restaurant(amenityID, rname, cuisine) VALUES ('A17', 'STARBUCKS','COFFEE');
+INSERT INTO Restaurant(amenityID, rName, cuisine) VALUES ('A11', 'SEASIDE CAFE','COFFEE');
+INSERT INTO Restaurant(amenityID, rName, cuisine) VALUES ('A12', 'TONY''S BAR AND GRILL','AMERICAN CASUAL DINING');
+INSERT INTO Restaurant(amenityID, rName, cuisine) VALUES ('A13', 'STARBUCKS','COFFEE');
+INSERT INTO Restaurant(amenityID, rName, cuisine) VALUES ('A14', 'THE GARDEN THAI','THAI');
+INSERT INTO Restaurant(amenityID, rName, cuisine) VALUES ('A15', 'GUACAMOLE BLISS','MEXICAN');
+INSERT INTO Restaurant(amenityID, rName, cuisine) VALUES ('A17', 'STARBUCKS','COFFEE');
 
 
 CREATE TABLE Giftshop (
