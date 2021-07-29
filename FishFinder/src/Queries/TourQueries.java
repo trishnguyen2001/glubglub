@@ -52,24 +52,28 @@ public class TourQueries {
 		return "SELECT T.tourID FROM Tour T, ZoneTours ZT WHERE ZT.zoneID = '" + zone + "' AND T.tourID = ZT.tourID";	
 	}
 	
-	
+	//output display --> formats and shows records returned by intersecting of all query
 	public ResultSet intersection(String nq, String tq, String zq) throws SQLException {
-		return stmt.executeQuery(	"SELECT T.tName, T.time, ZT.zoneID " + 
-									"FROM Tour T, ZoneTours ZT " +
+		return stmt.executeQuery(	"SELECT T.tourID AS TourID, T.tName AS Tour_Name, T.time AS Tour_Time, LISTAGG(zoneID, ', ') " + 
+									"WITHIN GROUP (ORDER BY zoneID) AS Zone_Listing " + 
+									"FROM Tour T LEFT OUTER JOIN ZoneTours ZT " +
+									"ON T.tourID = ZT.tourID " +
 									"WHERE T.tourID IN ((" + nq + ") INTERSECT (" + tq + ") INTERSECT (" + zq + ")) " +  
-									"AND T.tourID = ZT.tourID " +
+									"GROUP BY T.tName, T.tourID, T.time " +
 									"ORDER BY T.tourID" 
 								);
 	}
 	
+	//input display --> formats and shows all records
 	public ResultSet tourInputDisplay() throws SQLException {
-	return stmt.executeQuery( "SELECT T.tourid AS TourID, T.tname AS Tour_Name, T.time AS Tour_Time, LISTAGG(zoneID, ', ') WITHIN GROUP (ORDER BY zoneID) AS Zone_Listing "
-			+ "FROM Tour T "
-			+ "LEFT OUTER JOIN ZoneTours ZT "
-			+ "ON T.tourid=ZT.tourid "
-			+ "GROUP BY T.tourid, T.tname, T.time"
-			);
+		return stmt.executeQuery( "SELECT T.tourID AS TourID, T.tName AS Tour_Name, T.time AS Tour_Time, LISTAGG(zoneID, ', ') WITHIN GROUP (ORDER BY zoneID) AS Zone_Listing "
+				+ "FROM Tour T "
+				+ "LEFT OUTER JOIN ZoneTours ZT "
+				+ "ON T.tourID=ZT.tourID "
+				+ "GROUP BY T.tourID, T.tName, T.time"
+				);
 
-	}
+		}
+
 
 }
