@@ -1,41 +1,41 @@
 CREATE TABLE Animal(
 general_name VARCHAR2(50) PRIMARY KEY,
 scientific_name VARCHAR2(50) NOT NULL);
-INSERT INTO Animal(general_name, scientific_name) VALUES ('Blue Tang', 'Paracanthurus hepatus');
-INSERT INTO Animal(general_name, scientific_name) VALUES ('Green Sea Turtle', 'Chelonia mydas');
-INSERT INTO Animal(general_name, scientific_name) VALUES ('Giant Clam', 'Tridacna gigas');
-INSERT INTO Animal(general_name, scientific_name) VALUES ('Red Lionfish', 'Pterois volitans');
-INSERT INTO Animal(general_name, scientific_name) VALUES ('Whitetip Reef Shark', 'Triaenodon obesus');
-INSERT INTO Animal(general_name, scientific_name) VALUES ('Sea Otter', 'Enhydra lutris');
-INSERT INTO Animal(general_name, scientific_name) VALUES ('Kelp Bass', 'Paralabrax clathratus');
-INSERT INTO Animal(general_name, scientific_name) VALUES ('Giant Sea Bass', 'Stereolepis gigas');
-INSERT INTO Animal(general_name, scientific_name) VALUES ('Blue Rockfish', 'Sebastes mystinus');
-INSERT INTO Animal(general_name, scientific_name) VALUES ('Bat Ray', 'Myliobatis californica');
-INSERT INTO Animal(general_name, scientific_name) VALUES ('Barramundi', 'Lates calcarifer');
-INSERT INTO Animal(general_name, scientific_name) VALUES ('Horseshoe Crab', 'Limulidae');
-INSERT INTO Animal(general_name, scientific_name) VALUES ('Gray Snapper', 'Lutjanus griseus');
-INSERT INTO Animal(general_name, scientific_name) VALUES ('Giant Mud Crab', 'Scylla serrata');
-INSERT INTO Animal(general_name, scientific_name) VALUES ('Lemon Shark', 'Negaprion brevirostris');
-INSERT INTO Animal(general_name, scientific_name) VALUES ('Giant Sunfish', 'Mola mola');
-INSERT INTO Animal(general_name, scientific_name) VALUES ('Bluefin Tuna', 'Thunnus thynnus');
-INSERT INTO Animal(general_name, scientific_name) VALUES ('Great White Shark', 'Carcharodon carcharias');
-INSERT INTO Animal(general_name, scientific_name) VALUES ('Giant Pacific Octopus', 'Enteroctopus dofleini');
-INSERT INTO Animal(general_name, scientific_name) VALUES ('Whale Shark', 'Rhincodon typus');
-INSERT INTO Animal(general_name, scientific_name) VALUES ('Starry Flounder', 'Platichthys stellatus');
-INSERT INTO Animal(general_name, scientific_name) VALUES ('Pacific Staghorn Sculpin', 'Leptocottus armatus');
-INSERT INTO Animal(general_name, scientific_name) VALUES ('Northern Pipefish', 'Syngnathus fuscus');
-INSERT INTO Animal(general_name, scientific_name) VALUES ('Ribbed Mussel', 'Geukensia demissa');
-INSERT INTO Animal(general_name, scientific_name) VALUES ('Harris Mud Crab', 'Rhithropanopeus harrisii');
-INSERT INTO Animal(general_name, scientific_name) VALUES ('Galapagos Penguin', 'Spheniscus mendiculus');
-INSERT INTO Animal(general_name, scientific_name) VALUES ('Atlantic Bluefin Tuna', 'Thunnus thynnus');
-INSERT INTO Animal(general_name, scientific_name) VALUES ('Atlantic Goliath Grouper', 'Epinephelus itajara');
-INSERT INTO Animal(general_name, scientific_name) VALUES ('Banded Butterflyfish', 'Chaetodon striatus');
-INSERT INTO Animal(general_name, scientific_name) VALUES ('Chilean Jack Mackerel', 'Trachurus murphyi');
-INSERT INTO Animal(general_name, scientific_name) VALUES ('Common Dolphinfish', 'Coryphaena hippurus');
-INSERT INTO Animal(general_name, scientific_name) VALUES ('Atlantic Cod', 'Gadus morhua');
-INSERT INTO Animal(general_name, scientific_name) VALUES ('Chilean Common Hake', 'Merluccius gayi');
-INSERT INTO Animal(general_name, scientific_name) VALUES ('John Dory', 'Zeus faber');
-INSERT INTO Animal(general_name, scientific_name) VALUES ('Pacific Halibut', 'Hippoglossus stenolepis');
+INSERT INTO Animal(general_name, scientific_name) VALUES ('BLUE TANG', 'PARACANTHURUS HEPATUS');
+INSERT INTO Animal(general_name, scientific_name) VALUES ('GREEN SEA TURTLE', 'CHELONIA MYDAS');
+INSERT INTO Animal(general_name, scientific_name) VALUES ('GIANT CLAM', 'TRIDACNA GIGAS');
+INSERT INTO Animal(general_name, scientific_name) VALUES ('RED LIONFISH', 'PTEROIS VOLITANS');
+INSERT INTO Animal(general_name, scientific_name) VALUES ('WHITETIP REEF SHARK', 'TRIAENODON OBESUS');
+INSERT INTO Animal(general_name, scientific_name) VALUES ('SEA OTTER', 'ENHYDRA LUTRIS');
+INSERT INTO Animal(general_name, scientific_name) VALUES ('KELP BASS', 'PARALABRAX CLATHRATUS');
+INSERT INTO Animal(general_name, scientific_name) VALUES ('GIANT SEA BASS', 'STEREOLEPIS GIGAS');
+INSERT INTO Animal(general_name, scientific_name) VALUES ('BLUE ROCKFISH', 'SEBASTES MYSTINUS');
+INSERT INTO Animal(general_name, scientific_name) VALUES ('BAT RAY', 'MYLIOBATIS CALIFORNICA');
+INSERT INTO Animal(general_name, scientific_name) VALUES ('BARRAMUNDI', 'LATES CALCARIFER');
+INSERT INTO Animal(general_name, scientific_name) VALUES ('HORSESHOE CRAB', 'LIMULIDAE');
+INSERT INTO Animal(general_name, scientific_name) VALUES ('GRAY SNAPPER', 'LUTJANUS GRISEUS');
+INSERT INTO Animal(general_name, scientific_name) VALUES ('GIANT MUD CRAB', 'SCYLLA SERRATA');
+INSERT INTO Animal(general_name, scientific_name) VALUES ('LEMON SHARK', 'NEGAPRION BREVIROSTRIS');
+INSERT INTO Animal(general_name, scientific_name) VALUES ('GIANT SUNFISH', 'MOLA MOLA');
+INSERT INTO Animal(general_name, scientific_name) VALUES ('BLUEFIN TUNA', 'THUNNUS THYNNUS');
+INSERT INTO Animal(general_name, scientific_name) VALUES ('GREAT WHITE SHARK', 'CARCHARODON CARCHARIAS');
+INSERT INTO Animal(general_name, scientific_name) VALUES ('GIANT PACIFIC OCTOPUS', 'ENTEROCTOPUS DOFLEINI');
+INSERT INTO Animal(general_name, scientific_name) VALUES ('WHALE SHARK', 'RHINCODON TYPUS');
+INSERT INTO Animal(general_name, scientific_name) VALUES ('STARRY FLOUNDER', 'PLATICHTHYS STELLATUS');
+INSERT INTO Animal(general_name, scientific_name) VALUES ('PACIFIC STAGHORN SCULPIN', 'LEPTOCOTTUS ARMATUS');
+INSERT INTO Animal(general_name, scientific_name) VALUES ('NORTHERN PIPEFISH', 'SYNGNATHUS FUSCUS');
+INSERT INTO Animal(general_name, scientific_name) VALUES ('RIBBED MUSSEL', 'GEUKENSIA DEMISSA');
+INSERT INTO Animal(general_name, scientific_name) VALUES ('HARRIS MUD CRAB', 'RHITHROPANOPEUS HARRISII');
+INSERT INTO Animal(general_name, scientific_name) VALUES ('GALAPAGOS PENGUIN', 'SPHENISCUS MENDICULUS');
+INSERT INTO Animal(general_name, scientific_name) VALUES ('ATLANTIC BLUEFIN TUNA', 'THUNNUS THYNNUS');
+INSERT INTO Animal(general_name, scientific_name) VALUES ('ATLANTIC GOLIATH GROUPER', 'EPINEPHELUS ITAJARA');
+INSERT INTO Animal(general_name, scientific_name) VALUES ('BANDED BUTTERFLYFISH', 'CHAETODON STRIATUS');
+INSERT INTO Animal(general_name, scientific_name) VALUES ('CHILEAN JACK MACKEREL', 'TRACHURUS MURPHYI');
+INSERT INTO Animal(general_name, scientific_name) VALUES ('COMMON DOLPHINFISH', 'CORYPHAENA HIPPURUS');
+INSERT INTO Animal(general_name, scientific_name) VALUES ('ATLANTIC COD', 'GADUS MORHUA');
+INSERT INTO Animal(general_name, scientific_name) VALUES ('CHILEAN COMMON HAKE', 'MERLUCCIUS GAYI');
+INSERT INTO Animal(general_name, scientific_name) VALUES ('JOHN DORY', 'ZEUS FABER');
+INSERT INTO Animal(general_name, scientific_name) VALUES ('PACIFIC HALIBUT', 'HIPPOGLOSSUS STENOLEPIS');
 
 CREATE TABLE Zone(
 zoneID VARCHAR2(3) PRIMARY KEY,
@@ -96,48 +96,47 @@ PRIMARY KEY(general_name, habitatID, zoneID),
 FOREIGN KEY(general_name) REFERENCES Animal(general_name) ON DELETE CASCADE,
 FOREIGN KEY(habitatID, zoneID) REFERENCES HabitatInZone(habitatID, zoneID) ON DELETE CASCADE
 );
-INSERT INTO AnimalInsideZone(general_name, habitatID, zoneID) VALUES ('Blue Tang', 'H1', 'Z1');
-INSERT INTO AnimalInsideZone(general_name, habitatID, zoneID) VALUES ('Green Sea Turtle', 'H2', 'Z1');
-INSERT INTO AnimalInsideZone(general_name, habitatID, zoneID) VALUES ('Giant Clam', 'H3', 'Z1');
-INSERT INTO AnimalInsideZone(general_name, habitatID, zoneID) VALUES ('Red Lionfish', 'H4', 'Z1');
-INSERT INTO AnimalInsideZone(general_name, habitatID, zoneID) VALUES ('Whitetip Reef Shark', 'H5', 'Z1');
-INSERT INTO AnimalInsideZone(general_name, habitatID, zoneID) VALUES ('Sea Otter', 'H6', 'Z2');
-INSERT INTO AnimalInsideZone(general_name, habitatID, zoneID) VALUES ('Kelp Bass', 'H7', 'Z2');
-INSERT INTO AnimalInsideZone(general_name, habitatID, zoneID) VALUES ('Giant Sea Bass', 'H8', 'Z2');
-INSERT INTO AnimalInsideZone(general_name, habitatID, zoneID) VALUES ('Blue Rockfish', 'H9', 'Z2');
-INSERT INTO AnimalInsideZone(general_name, habitatID, zoneID) VALUES ('Bat Ray', 'H10', 'Z2');
-INSERT INTO AnimalInsideZone(general_name, habitatID, zoneID) VALUES ('Barramundi', 'H11', 'Z3');
-INSERT INTO AnimalInsideZone(general_name, habitatID, zoneID) VALUES ('Horseshoe Crab', 'H12', 'Z3');
-INSERT INTO AnimalInsideZone(general_name, habitatID, zoneID) VALUES ('Gray Snapper', 'H13', 'Z3');
-INSERT INTO AnimalInsideZone(general_name, habitatID, zoneID) VALUES ('Giant Mud Crab', 'H14', 'Z3');
-INSERT INTO AnimalInsideZone(general_name, habitatID, zoneID) VALUES ('Lemon Shark', 'H15', 'Z3');
-INSERT INTO AnimalInsideZone(general_name, habitatID, zoneID) VALUES ('Galapagos Penguin', 'H16', 'Z3');
-INSERT INTO AnimalInsideZone(general_name, habitatID, zoneID) VALUES ('Giant Sunfish', 'H17', 'Z4');
-INSERT INTO AnimalInsideZone(general_name, habitatID, zoneID) VALUES ('Bluefin Tuna', 'H18', 'Z4');
-INSERT INTO AnimalInsideZone(general_name, habitatID, zoneID) VALUES ('Great White Shark', 'H19', 'Z4');
-INSERT INTO AnimalInsideZone(general_name, habitatID, zoneID) VALUES ('Giant Pacific Octopus', 'H20', 'Z4');
-INSERT INTO AnimalInsideZone(general_name, habitatID, zoneID) VALUES ('Whale Shark', 'H21', 'Z4');
-INSERT INTO AnimalInsideZone(general_name, habitatID, zoneID) VALUES ('Starry Flounder', 'H22', 'Z5');
-INSERT INTO AnimalInsideZone(general_name, habitatID, zoneID) VALUES ('Pacific Staghorn Sculpin', 'H23', 'Z5');
-INSERT INTO AnimalInsideZone(general_name, habitatID, zoneID) VALUES ('Northern Pipefish', 'H24', 'Z5');
-INSERT INTO AnimalInsideZone(general_name, habitatID, zoneID) VALUES ('Ribbed Mussel', 'H25', 'Z5');
-INSERT INTO AnimalInsideZone(general_name, habitatID, zoneID) VALUES ('Harris Mud Crab', 'H26', 'Z5');
-INSERT INTO AnimalInsideZone(general_name, habitatID, zoneID) VALUES ('Atlantic Bluefin Tuna', 'H27', 'Z5');
-INSERT INTO AnimalInsideZone(general_name, habitatID, zoneID) VALUES ('Atlantic Goliath Grouper', 'H28', 'Z1');
-INSERT INTO AnimalInsideZone(general_name, habitatID, zoneID) VALUES ('Banded Butterflyfish', 'H29', 'Z1');
-INSERT INTO AnimalInsideZone(general_name, habitatID, zoneID) VALUES ('Chilean Jack Mackerel', 'H30', 'Z4');
-INSERT INTO AnimalInsideZone(general_name, habitatID, zoneID) VALUES ('Common Dolphinfish', 'H31', 'Z4');
-INSERT INTO AnimalInsideZone(general_name, habitatID, zoneID) VALUES ('Atlantic Cod', 'H32', 'Z6');
-INSERT INTO AnimalInsideZone(general_name, habitatID, zoneID) VALUES ('Chilean Common Hake', 'H33', 'Z6');
-INSERT INTO AnimalInsideZone(general_name, habitatID, zoneID) VALUES ('John Dory', 'H34', 'Z6');
-INSERT INTO AnimalInsideZone(general_name, habitatID, zoneID) VALUES ('Pacific Halibut', 'H35', 'Z6');
+INSERT INTO AnimalInsideZone(general_name, habitatID, zoneID) VALUES ('BLUE TANG', 'H1', 'Z1');
+INSERT INTO AnimalInsideZone(general_name, habitatID, zoneID) VALUES ('GREEN SEA TURTLE', 'H2', 'Z1');
+INSERT INTO AnimalInsideZone(general_name, habitatID, zoneID) VALUES ('GIANT CLAM', 'H3', 'Z1');
+INSERT INTO AnimalInsideZone(general_name, habitatID, zoneID) VALUES ('RED LIONFISH', 'H4', 'Z1');
+INSERT INTO AnimalInsideZone(general_name, habitatID, zoneID) VALUES ('WHITETIP REEF SHARK', 'H5', 'Z1');
+INSERT INTO AnimalInsideZone(general_name, habitatID, zoneID) VALUES ('SEA OTTER', 'H6', 'Z2');
+INSERT INTO AnimalInsideZone(general_name, habitatID, zoneID) VALUES ('KELP BASS', 'H7', 'Z2');
+INSERT INTO AnimalInsideZone(general_name, habitatID, zoneID) VALUES ('GIANT SEA BASS', 'H8', 'Z2');
+INSERT INTO AnimalInsideZone(general_name, habitatID, zoneID) VALUES ('BLUE ROCKFISH', 'H9', 'Z2');
+INSERT INTO AnimalInsideZone(general_name, habitatID, zoneID) VALUES ('BAT RAY', 'H10', 'Z2');
+INSERT INTO AnimalInsideZone(general_name, habitatID, zoneID) VALUES ('BARRAMUNDI', 'H11', 'Z3');
+INSERT INTO AnimalInsideZone(general_name, habitatID, zoneID) VALUES ('HORSESHOE CRAB', 'H12', 'Z3');
+INSERT INTO AnimalInsideZone(general_name, habitatID, zoneID) VALUES ('GRAY SNAPPER', 'H13', 'Z3');
+INSERT INTO AnimalInsideZone(general_name, habitatID, zoneID) VALUES ('GIANT MUD CRAB', 'H14', 'Z3');
+INSERT INTO AnimalInsideZone(general_name, habitatID, zoneID) VALUES ('LEMON SHARK', 'H15', 'Z3');
+INSERT INTO AnimalInsideZone(general_name, habitatID, zoneID) VALUES ('GIANT SUNFISH', 'H16', 'Z3');
+INSERT INTO AnimalInsideZone(general_name, habitatID, zoneID) VALUES ('BLUEFIN TUNA', 'H17', 'Z4');
+INSERT INTO AnimalInsideZone(general_name, habitatID, zoneID) VALUES ('GREAT WHITE SHARK', 'H18', 'Z4');
+INSERT INTO AnimalInsideZone(general_name, habitatID, zoneID) VALUES ('GIANT PACIFIC OCTOPUS', 'H19', 'Z4');
+INSERT INTO AnimalInsideZone(general_name, habitatID, zoneID) VALUES ('WHALE SHARK', 'H20', 'Z4');
+INSERT INTO AnimalInsideZone(general_name, habitatID, zoneID) VALUES ('STARRY FLOUNDER', 'H21', 'Z4');
+INSERT INTO AnimalInsideZone(general_name, habitatID, zoneID) VALUES ('PACIFIC STAGHORN SCULPIN', 'H22', 'Z5');
+INSERT INTO AnimalInsideZone(general_name, habitatID, zoneID) VALUES ('NORTHERN PIPEFISH', 'H23', 'Z5');
+INSERT INTO AnimalInsideZone(general_name, habitatID, zoneID) VALUES ('RIBBED MUSSEL', 'H24', 'Z5');
+INSERT INTO AnimalInsideZone(general_name, habitatID, zoneID) VALUES ('HARRIS MUD CRAB', 'H25', 'Z5');
+INSERT INTO AnimalInsideZone(general_name, habitatID, zoneID) VALUES ('GALAPAGOS PENGUIN', 'H26', 'Z5');
+INSERT INTO AnimalInsideZone(general_name, habitatID, zoneID) VALUES ('ATLANTIC BLUEFIN TUNA', 'H27', 'Z5');
+INSERT INTO AnimalInsideZone(general_name, habitatID, zoneID) VALUES ('ATLANTIC GOLIATH GROUPER', 'H28', 'Z1');
+INSERT INTO AnimalInsideZone(general_name, habitatID, zoneID) VALUES ('BANDED BUTTERFLYFISH', 'H29', 'Z1');
+INSERT INTO AnimalInsideZone(general_name, habitatID, zoneID) VALUES ('CHILEAN JACK MACKEREL', 'H30', 'Z4');
+INSERT INTO AnimalInsideZone(general_name, habitatID, zoneID) VALUES ('COMMON DOLPHINFISH', 'H31', 'Z4');
+INSERT INTO AnimalInsideZone(general_name, habitatID, zoneID) VALUES ('ATLANTIC COD', 'H32', 'Z6');
+INSERT INTO AnimalInsideZone(general_name, habitatID, zoneID) VALUES ('CHILEAN COMMON HAKE', 'H33', 'Z6');
+INSERT INTO AnimalInsideZone(general_name, habitatID, zoneID) VALUES ('JOHN DORY', 'H34', 'Z6');
+INSERT INTO AnimalInsideZone(general_name, habitatID, zoneID) VALUES ('PACIFIC HALIBUT', 'H35', 'Z6');
 
 CREATE TABLE Amenity(
 amenityID VARCHAR2(3) PRIMARY KEY,
 location VARCHAR2(3) NOT NULL,
 FOREIGN KEY (location) REFERENCES Zone(zoneID) ON DELETE CASCADE
 ); 
-
 INSERT INTO Amenity(amenityID, location) VALUES ('A1', 'Z1');
 INSERT INTO Amenity(amenityID, location) VALUES ('A2', 'Z1');
 INSERT INTO Amenity(amenityID, location) VALUES ('A3', 'Z2');
@@ -179,7 +178,7 @@ rName VARCHAR(50),
 cuisine VARCHAR(30),
 FOREIGN KEY (amenityID) REFERENCES Amenity(amenityID) ON DELETE CASCADE
 );
-INSERT INTO Restaurant(amenityID, rname, cuisine) VALUES ('A11', 'SEASIDE COFFEE','COFFEE');
+INSERT INTO Restaurant(amenityID, rname, cuisine) VALUES ('A11', 'SEASIDE CAFE','COFFEE');
 INSERT INTO Restaurant(amenityID, rname, cuisine) VALUES ('A12', 'TONY''S BAR AND GRILL','AMERICAN CASUAL DINING');
 INSERT INTO Restaurant(amenityID, rname, cuisine) VALUES ('A13', 'STARBUCKS','COFFEE');
 INSERT INTO Restaurant(amenityID, rname, cuisine) VALUES ('A14', 'THE GARDEN THAI','THAI');
@@ -272,10 +271,10 @@ PRIMARY KEY (liveshowID, general_name),
 FOREIGN KEY (liveshowID) REFERENCES LiveShow(liveshowID) ON DELETE CASCADE,
 FOREIGN KEY (general_name) REFERENCES Animal(general_name) ON DELETE CASCADE
 );
-INSERT INTO AnimalPerformsInShow(liveshowID, general_name) VALUES ('LS1', 'Galapagos Penguin');
-INSERT INTO AnimalPerformsInShow(liveshowID, general_name) VALUES ('LS2', 'Bat Ray');
-INSERT INTO AnimalPerformsInShow(liveshowID, general_name) VALUES ('LS3', 'Common Dolphinfish');
-INSERT INTO AnimalPerformsInShow(liveshowID, general_name) VALUES ('LS4', 'Common Dolphinfish');
+INSERT INTO AnimalPerformsInShow(liveshowID, general_name) VALUES ('LS1', 'GALAPAGOS PENGUIN');
+INSERT INTO AnimalPerformsInShow(liveshowID, general_name) VALUES ('LS2', 'BAT RAY');
+INSERT INTO AnimalPerformsInShow(liveshowID, general_name) VALUES ('LS3', 'COMMON DOLPHINFISH');
+INSERT INTO AnimalPerformsInShow(liveshowID, general_name) VALUES ('LS4', 'COMMON DOLPHINFISH');
 
 CREATE TABLE ZoneTours (
 tourID VARCHAR(3),
@@ -303,26 +302,26 @@ CREATE TABLE Visitor(
 visitorID VARCHAR2(3) PRIMARY KEY,
 vName VARCHAR2(10)
 );
-INSERT INTO Visitor(visitorID, vName) VALUES('V1','John');
-INSERT INTO Visitor(visitorID, vName) VALUES('V2','Melissa');
-INSERT INTO Visitor(visitorID, vName) VALUES('V3','Dave');
-INSERT INTO Visitor(visitorID, vName) VALUES('V4','Daisey');
-INSERT INTO Visitor(visitorID, vName) VALUES('V5','Aaron');
-INSERT INTO Visitor(visitorID, vName) VALUES('V6','Eva');
-INSERT INTO Visitor(visitorID, vName) VALUES('V7','Eddie');
-INSERT INTO Visitor(visitorID, vName) VALUES('V8','Genie');
-INSERT INTO Visitor(visitorID, vName) VALUES('V9','Gabe');
-INSERT INTO Visitor(visitorID, vName) VALUES('V10','Pam');
-INSERT INTO Visitor(visitorID, vName) VALUES('V11','Jack');
-INSERT INTO Visitor(visitorID, vName) VALUES('V12','Angela');
-INSERT INTO Visitor(visitorID, vName) VALUES('V13','Susan');
-INSERT INTO Visitor(visitorID, vName) VALUES('V14','Jayden');
-INSERT INTO Visitor(visitorID, vName) VALUES('V15','Hannah');
-INSERT INTO Visitor(visitorID, vName) VALUES('V16','Edward');
-INSERT INTO Visitor(visitorID, vName) VALUES('V17','Jen');
-INSERT INTO Visitor(visitorID, vName) VALUES('V18','Joey');
-INSERT INTO Visitor(visitorID, vName) VALUES('V19','Monica');
-INSERT INTO Visitor(visitorID, vName) VALUES('V20','Ross');
+INSERT INTO Visitor(visitorID, vName) VALUES ('V1', 'JOHN');
+INSERT INTO Visitor(visitorID, vName) VALUES ('V2', 'MELISSA');
+INSERT INTO Visitor(visitorID, vName) VALUES ('V3', 'DAVE');
+INSERT INTO Visitor(visitorID, vName) VALUES ('V4', 'DAISEY');
+INSERT INTO Visitor(visitorID, vName) VALUES ('V5', 'AARON');
+INSERT INTO Visitor(visitorID, vName) VALUES ('V6', 'EVA');
+INSERT INTO Visitor(visitorID, vName) VALUES ('V7', 'EDDIE');
+INSERT INTO Visitor(visitorID, vName) VALUES ('V8', 'GENIE');
+INSERT INTO Visitor(visitorID, vName) VALUES ('V9', 'GABE');
+INSERT INTO Visitor(visitorID, vName) VALUES ('V10', 'PAM');
+INSERT INTO Visitor(visitorID, vName) VALUES ('V11', 'JACK');
+INSERT INTO Visitor(visitorID, vName) VALUES ('V12', 'ANGELA');
+INSERT INTO Visitor(visitorID, vName) VALUES ('V13', 'SUSAN');
+INSERT INTO Visitor(visitorID, vName) VALUES ('V14', 'JAYDEN');
+INSERT INTO Visitor(visitorID, vName) VALUES ('V15', 'HANNAH');
+INSERT INTO Visitor(visitorID, vName) VALUES ('V16', 'EDWARD');
+INSERT INTO Visitor(visitorID, vName) VALUES ('V17', 'JEN');
+INSERT INTO Visitor(visitorID, vName) VALUES ('V18', 'JOEY');
+INSERT INTO Visitor(visitorID, vName) VALUES ('V19', 'MONICA');
+INSERT INTO Visitor(visitorID, vName) VALUES ('V20', 'ROSS');
 
 CREATE TABLE VisitorTags(
 visitorID VARCHAR2(3),
@@ -332,40 +331,40 @@ PRIMARY KEY(visitorID, general_name),
 FOREIGN KEY(visitorID) REFERENCES Visitor(visitorID) ON DELETE CASCADE,
 FOREIGN KEY(general_name) REFERENCES Animal(general_name) ON DELETE CASCADE
 );
-INSERT INTO VisitorTags(visitorID, general_name, tag_description) VALUES ('V1', 'Blue Tang', 'adorable');
-INSERT INTO VisitorTags(visitorID, general_name, tag_description) VALUES ('V3', 'Sea Otter', 'adorable');
-INSERT INTO VisitorTags(visitorID, general_name, tag_description) VALUES ('V5', 'Whale Shark', 'scary');
-INSERT INTO VisitorTags(visitorID, general_name, tag_description) VALUES ('V6', 'Red Lionfish', 'unique');
-INSERT INTO VisitorTags(visitorID, general_name, tag_description) VALUES ('V7', 'Green Sea Turtle', 'unique');
-INSERT INTO VisitorTags(visitorID, general_name, tag_description) VALUES ('V5', 'Banded Butterflyfish', 'adorable');
-INSERT INTO VisitorTags(visitorID, general_name, tag_description) VALUES ('V10', 'Galapagos Penguin', 'cute');
-INSERT INTO VisitorTags(visitorID, general_name, tag_description) VALUES ('V13', 'Common Dolphinfish', 'cute');
-INSERT INTO VisitorTags(visitorID, general_name, tag_description) VALUES ('V16', 'Great White Shark', 'cool');
-INSERT INTO VisitorTags(visitorID, general_name, tag_description) VALUES ('V12', 'Bat Ray', 'cool');
-INSERT INTO VisitorTags(visitorID, general_name, tag_description) VALUES ('V2', 'Giant Clam', 'cool');
-INSERT INTO VisitorTags(visitorID, general_name, tag_description) VALUES ('V20', 'Whitetip Reef Shark', 'scary');
-INSERT INTO VisitorTags(visitorID, general_name, tag_description) VALUES ('V11', 'Kelp Bass', 'unique');
-INSERT INTO VisitorTags(visitorID, general_name, tag_description) VALUES ('V13', 'Giant Sea Bass', 'cool');
-INSERT INTO VisitorTags(visitorID, general_name, tag_description) VALUES ('V5', 'Blue Rockfish', 'cool');
-INSERT INTO VisitorTags(visitorID, general_name, tag_description) VALUES ('V4', 'Barramundi', 'adorable');
-INSERT INTO VisitorTags(visitorID, general_name, tag_description) VALUES ('V8', 'Horseshoe Crab', 'adorable');
-INSERT INTO VisitorTags(visitorID, general_name, tag_description) VALUES ('V19', 'Gray Snapper', 'cool');
-INSERT INTO VisitorTags(visitorID, general_name, tag_description) VALUES ('V13', 'Giant Mud Crab', 'unique');
-INSERT INTO VisitorTags(visitorID, general_name, tag_description) VALUES ('V20', 'Lemon Shark', 'unique');
-INSERT INTO VisitorTags(visitorID, general_name, tag_description) VALUES ('V19', 'Giant Sunfish', 'unique');
-INSERT INTO VisitorTags(visitorID, general_name, tag_description) VALUES ('V11', 'Bluefin Tuna', 'cute');
-INSERT INTO VisitorTags(visitorID, general_name, tag_description) VALUES ('V10', 'Giant Pacific Octopus', 'unique');
-INSERT INTO VisitorTags(visitorID, general_name, tag_description) VALUES ('V5', 'Starry Flounder', 'cute');
-INSERT INTO VisitorTags(visitorID, general_name, tag_description) VALUES ('V6', 'Pacific Staghorn Sculpin', 'cool');
-INSERT INTO VisitorTags(visitorID, general_name, tag_description) VALUES ('V8', 'Northern Pipefish', 'cool');
-INSERT INTO VisitorTags(visitorID, general_name, tag_description) VALUES ('V19', 'Ribbed Mussel', 'adorable');
-INSERT INTO VisitorTags(visitorID, general_name, tag_description) VALUES ('V16', 'Harris Mud Crab', 'unique');
-INSERT INTO VisitorTags(visitorID, general_name, tag_description) VALUES ('V17', 'Atlantic Bluefin Tuna', 'cool');
-INSERT INTO VisitorTags(visitorID, general_name, tag_description) VALUES ('V18', 'Atlantic Goliath Grouper', 'cool');
-INSERT INTO VisitorTags(visitorID, general_name, tag_description) VALUES ('V14', 'Chilean Jack Mackerel', 'cool');
-INSERT INTO VisitorTags(visitorID, general_name, tag_description) VALUES ('V11', 'Atlantic Cod', 'adorable');
-INSERT INTO VisitorTags(visitorID, general_name, tag_description) VALUES ('V2', 'Chilean Common Hake', 'cute');
-INSERT INTO VisitorTags(visitorID, general_name, tag_description) VALUES ('V1', 'John Dory', 'unique');
-INSERT INTO VisitorTags(visitorID, general_name, tag_description) VALUES ('V4', 'Pacific Halibut', 'cool');
+INSERT INTO VisitorTags(visitorID, general_name, tag_description) VALUES ('V1', 'BLUE TANG', 'ADORABLE');
+INSERT INTO VisitorTags(visitorID, general_name, tag_description) VALUES ('V3', 'GREEN SEA TURTLE', 'ADORABLE');
+INSERT INTO VisitorTags(visitorID, general_name, tag_description) VALUES ('V5', 'GIANT CLAM', 'SCARY');
+INSERT INTO VisitorTags(visitorID, general_name, tag_description) VALUES ('V6', 'RED LIONFISH', 'UNIQUE');
+INSERT INTO VisitorTags(visitorID, general_name, tag_description) VALUES ('V7', 'WHITETIP REEF SHARK', 'UNIQUE');
+INSERT INTO VisitorTags(visitorID, general_name, tag_description) VALUES ('V5', 'SEA OTTER', 'ADORABLE');
+INSERT INTO VisitorTags(visitorID, general_name, tag_description) VALUES ('V10', 'KELP BASS', 'CUTE');
+INSERT INTO VisitorTags(visitorID, general_name, tag_description) VALUES ('V13', 'GIANT SEA BASS', 'CUTE');
+INSERT INTO VisitorTags(visitorID, general_name, tag_description) VALUES ('V16', 'BLUE ROCKFISH', 'COOL');
+INSERT INTO VisitorTags(visitorID, general_name, tag_description) VALUES ('V12', 'BAT RAY', 'COOL');
+INSERT INTO VisitorTags(visitorID, general_name, tag_description) VALUES ('V2', 'BARRAMUNDI', 'COOL');
+INSERT INTO VisitorTags(visitorID, general_name, tag_description) VALUES ('V20', 'HORSESHOE CRAB', 'SCARY');
+INSERT INTO VisitorTags(visitorID, general_name, tag_description) VALUES ('V11', 'GRAY SNAPPER', 'UNIQUE');
+INSERT INTO VisitorTags(visitorID, general_name, tag_description) VALUES ('V13', 'GIANT MUD CRAB', 'COOL');
+INSERT INTO VisitorTags(visitorID, general_name, tag_description) VALUES ('V5', 'LEMON SHARK', 'COOL');
+INSERT INTO VisitorTags(visitorID, general_name, tag_description) VALUES ('V4', 'GIANT SUNFISH', 'ADORABLE');
+INSERT INTO VisitorTags(visitorID, general_name, tag_description) VALUES ('V8', 'BLUEFIN TUNA', 'ADORABLE');
+INSERT INTO VisitorTags(visitorID, general_name, tag_description) VALUES ('V19', 'GREAT WHITE SHARK', 'COOL');
+INSERT INTO VisitorTags(visitorID, general_name, tag_description) VALUES ('V13', 'GIANT PACIFIC OCTOPUS', 'UNIQUE');
+INSERT INTO VisitorTags(visitorID, general_name, tag_description) VALUES ('V20', 'WHALE SHARK', 'UNIQUE');
+INSERT INTO VisitorTags(visitorID, general_name, tag_description) VALUES ('V19', 'STARRY FLOUNDER', 'UNIQUE');
+INSERT INTO VisitorTags(visitorID, general_name, tag_description) VALUES ('V11', 'PACIFIC STAGHORN SCULPIN', 'CUTE');
+INSERT INTO VisitorTags(visitorID, general_name, tag_description) VALUES ('V10', 'NORTHERN PIPEFISH', 'UNIQUE');
+INSERT INTO VisitorTags(visitorID, general_name, tag_description) VALUES ('V5', 'RIBBED MUSSEL', 'CUTE');
+INSERT INTO VisitorTags(visitorID, general_name, tag_description) VALUES ('V6', 'HARRIS MUD CRAB', 'COOL');
+INSERT INTO VisitorTags(visitorID, general_name, tag_description) VALUES ('V8', 'GALAPAGOS PENGUIN', 'COOL');
+INSERT INTO VisitorTags(visitorID, general_name, tag_description) VALUES ('V19', 'ATLANTIC BLUEFIN TUNA', 'ADORABLE');
+INSERT INTO VisitorTags(visitorID, general_name, tag_description) VALUES ('V16', 'ATLANTIC GOLIATH GROUPER', 'UNIQUE');
+INSERT INTO VisitorTags(visitorID, general_name, tag_description) VALUES ('V17', 'BANDED BUTTERFLYFISH', 'COOL');
+INSERT INTO VisitorTags(visitorID, general_name, tag_description) VALUES ('V18', 'CHILEAN JACK MACKEREL', 'COOL');
+INSERT INTO VisitorTags(visitorID, general_name, tag_description) VALUES ('V14', 'COMMON DOLPHINFISH', 'COOL');
+INSERT INTO VisitorTags(visitorID, general_name, tag_description) VALUES ('V11', 'ATLANTIC COD', 'ADORABLE');
+INSERT INTO VisitorTags(visitorID, general_name, tag_description) VALUES ('V2', 'CHILEAN COMMON HAKE', 'CUTE');
+INSERT INTO VisitorTags(visitorID, general_name, tag_description) VALUES ('V1', 'JOHN DORY', 'UNIQUE');
+INSERT INTO VisitorTags(visitorID, general_name, tag_description) VALUES ('V4', 'PACIFIC HALIBUT', 'COOL');
 
 COMMIT WORK;
