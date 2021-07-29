@@ -8,9 +8,9 @@
 <meta charset="ISO-8859-1">
 <title>Show Input</title>
 </head>
-<body>
+<body bgcolor = "#b3e6e4">
 	<form action="LandingPg.jsp">
-		<br> <input type="submit" value="Home">
+		<br> <input type="submit" value="Home"  style="height:50px; width:150px">
 	</form>
 
 	<h1>Search</h1>
@@ -19,7 +19,7 @@
 		<b>Name: </b> <input type="text" name="showName"> <br> <br>
 		<b>Time: </b> <input type="text" name="showTime"><br> <br>
 		<b>Show Animals: </b> <input type="text" name="showAnimal"><br> <br>
-		<input type="submit" value="Submit">
+		<input type="submit" value="Submit"  style="height:30px; width:90px">
 	</form>
 
 	<h1>All Shows</h1>
@@ -29,7 +29,7 @@
 		String show_time = request.getParameter("showTime");
 		String show_animal = request.getParameter("showAnimal");
 
-		out.print("<table border ='1'>	" + "<tr>" + "<th>#</th>" + "<th>Show Name</th>" + "<th>Time</th>"
+		out.print("<table border ='1' bgcolor='ffffff'>	" + "<tr>" + "<th>#</th>" + "<th>Show Name</th>" + "<th>Time</th>"
 				+ "<th>Show Animals</th>" + "</tr>");
 		ShowQueries sq = new ShowQueries();
 		ResultSet rs = sq.intersection(sq.showNameQuery(""), sq.timeQuery(""), sq.showAnimalQuery(""));

@@ -8,7 +8,7 @@
 <meta charset="ISO-8859-1">
 <title>Tour Output</title>
 </head>
-<body>
+<body bgcolor = "#b3e6e4">
 
 	<form action="LandingPg.jsp">
 		<br> <input type="submit" value="Home">
@@ -38,7 +38,7 @@
 
 
 	<%
-		out.print("<table border ='1'>	" + "<tr>" + "<th>#</th>" + "<th>Tour Name</th>" + "<th>Time</th>"
+		out.print("<table border ='1' bgcolor='ffffff'>	" + "<tr>" + "<th>#</th>" + "<th>Tour Name</th>" + "<th>Time</th>"
 				+ "<th>Zone</th>" + "</tr>");
 		TourQueries tq = new TourQueries();
 		ResultSet rs = tq.intersection(tq.tourNameQuery(tour_name), tq.timeQuery(tour_time),

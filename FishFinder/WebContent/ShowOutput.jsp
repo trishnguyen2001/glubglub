@@ -8,10 +8,10 @@
 <meta charset="ISO-8859-1">
 <title>Show Output</title>
 </head>
-<body>
+<body bgcolor = "#b3e6e4">
 
 	<form action="LandingPg.jsp">
-		<br> <input type="submit" value="Home">
+		<br> <input type="submit" value="Home"  style="height:50px; width:150px">
 	</form>
 
 	<h1>RESULTS FOR:</h1>
@@ -30,7 +30,7 @@
 
 
 	<form action="ShowInput.jsp">
-		<input type="submit" value="Back">
+		<input type="submit" value="Back"  style="height:50px; width:150px">
 	</form>
 
 	<br>
@@ -38,7 +38,7 @@
 
 
 	<%
-		out.print("<table border ='1'>	" + "<tr>" + "<th>#</th>" + "<th>Show Name</th>" + "<th>Time</th>"
+		out.print("<table border ='1' bgcolor='ffffff'>	" + "<tr>" + "<th>#</th>" + "<th>Show Name</th>" + "<th>Time</th>"
 				+ "<th>Show Animals</th>" + "</tr>");
 		ShowQueries sq = new ShowQueries();
 		ResultSet rs = sq.intersection(sq.showNameQuery(show_name), sq.timeQuery(show_time),

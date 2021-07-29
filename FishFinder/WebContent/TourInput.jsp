@@ -8,9 +8,9 @@
 <meta charset="ISO-8859-1">
 <title>Tour Input</title>
 </head>
-<body>
+<body bgcolor = "#b3e6e4">
 	<form action="LandingPg.jsp">
-		<br> <input type="submit" value="Home">
+		<br> <input type="submit" value="Home"  style="height:50px; width:150px">
 	</form>
 
 	<h1>Search</h1>
@@ -19,7 +19,7 @@
 		<b>Name: </b> <input type="text" name="tourName"> <br> <br>
 		<b>Time: </b> <input type="text" name="tourTime"><br> <br>
 		<b>Zone: </b> <input type="text" name="tourZone"><br> <br>
-		<input type="submit" value="Submit">
+		<input type="submit" value="Submit"  style="height:30px; width:90px">
 	</form>
 
 	<h1>All Tours</h1>
@@ -29,7 +29,7 @@
 		String tour_time = request.getParameter("tourTime");
 		String tour_zone = request.getParameter("tourZone");
 
-		out.print("<table border ='1'>	" + "<tr>" + "<th>#</th>" + "<th>Tour Name</th>" + "<th>Time</th>"
+		out.print("<table border ='1' bgcolor='ffffff'>	" + "<tr>" + "<th>#</th>" + "<th>Tour Name</th>" + "<th>Time</th>"
 				+ "<th>Zone</th>" + "</tr>");
 		TourQueries tq = new TourQueries();
 		ResultSet rs = tq.intersection(tq.tourNameQuery(""), tq.timeQuery(""), tq.zoneQuery(""));

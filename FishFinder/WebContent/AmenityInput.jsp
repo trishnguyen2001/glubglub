@@ -4,11 +4,11 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>AmenityInput</title>
 </head>
-<body>
+<body bgcolor = "#b3e6e4">
 	<form action="LandingPg.jsp">
-		<br> <input type="submit" value="Home">
+		<br> <input type="submit" value="Home"  style="height:50px; width:150px">
 	</form>
 </body>
 </html>
