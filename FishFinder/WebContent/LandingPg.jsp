@@ -8,9 +8,9 @@
 </head>
 <body>
 	<h1>Welcome!</h1>
-	<img src="resources\demented_nemo.jpg" width = "800" height = "500"> 
-	<!-- <img src="resources\pretty_nemo.jpg" width = "800" height = "500"> -->
- 
+	<!-- <img src="resources\demented_nemo.jpg" width = "800" height = "500">  -->
+	<img src="resources\pretty_nemo.jpg" width = "800" height = "500"> 
+
 	<form action="AnimalInput.jsp">
 		<br> <input type="submit" value="Browse Animals">
 	</form>
