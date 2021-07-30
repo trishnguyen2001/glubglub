@@ -8,9 +8,21 @@ public class ShowQueries{
 
 	public ShowQueries() {
 		try {
+//			Class.forName("oracle.jdbc.driver.OracleDriver");
+//			con = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe", "system", "Oracle.com0709");
+//			stmt = con.createStatement();
+			
+			String host = "localhost";
+			String dbName = "xe";
+			int port = 1521;
+			String oracleURL = "jdbc:oracle:thin:@" + host + ":" + port + ":" + dbName;
+			String username = "system";
+			String password = "Oracle.com0709";
+
 			Class.forName("oracle.jdbc.driver.OracleDriver");
-			con = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe", "system", "Oracle.com0709");
+			con = DriverManager.getConnection(oracleURL, username, password);
 			stmt = con.createStatement();
+
 
 		} catch (Exception e) {
 			System.out.println("ERROR: " + e.getMessage());
