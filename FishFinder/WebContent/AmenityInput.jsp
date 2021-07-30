@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
+<%@page
+	import="java.io.IOException, java.sql.*, Queries.AmenityQueries, java.util.*"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,17 +10,64 @@
 </head>
 <body bgcolor="#b3e6e4">
 	<form action="LandingPg.jsp">
-		<br> <input type="submit" value="Home"  style="height:50px; width:150px">
+		<br> <input type="submit" value="Home"
+			style="height: 50px; width: 150px">
 	</form>
 
 	<h1>Search</h1>
 
 	<form action="AmenityOutput.jsp">
-		Zone: <input type="text" name="amenity_zone"> <br> <br>
+		Location: <input type="text" name="amenity_zone"> <br> <br>
 		Type: <input type="text" name="amenity_type"> <br> <br>
 		Name: <input type="text" name="amenity_name"> <br> <br>
-		Description: <input type="text" name="amenity_description"> <br> <br>
-		<input type="submit" value="Submit" style="height: 30px; width: 90px"><br> <br>
+		Description: <input type="text" name="amenity_descr"> <br> <br>
+		<br> <input type="submit" value="Submit"
+			style="height: 30px; width: 90px"><br> <br>
 	</form>
+
+	<%
+
+		AmenityQueries amq = new AmenityQueries();
+		String intQ = amq.intersect(amq.zoneQ(""), amq.typeQ(""), amq.nameQ(""), amq.descQ(""));
+		/* String intQ = amq.intersect(amq.zoneQ(""), amq.typeQ(""), amq.descQ("")); */
+		
+		String joinQuery = amq.join(intQ);
+		PreparedStatement stmt = amq.prepStmt(joinQuery);
+		ResultSet rs = stmt.executeQuery();
+
+		out.print("<table border ='1' bgcolor='ffffff'>	" + "<tr>" + "<th>#</th>" + "<th>Location</th>"
+				+ "<th>Type</th>" + "<th>Description</th>" + "</tr>");
+		try {
+			int counter = 1;
+			while (rs.next()) {
+				System.out.println("ROW START: " + counter);
+				out.print("<tr>");
+				out.print("<td> " + counter + " </td>"); //result counter
+				out.print("<td>" + rs.getString("location") + "</td>"); //retrieves zone 
+
+				String currentType = rs.getString("amenity_type");
+				out.print("<td>" + currentType + "</td>"); //retrieves amenity type
+
+				//out.print("<td>" + rs.getString("amenity_type") + "</td>"); //retrieves amenity type
+				//out.print("<td>" + rs.getString("rName") + "</td>"); //retrieves name or restaurant
+				if (currentType.equalsIgnoreCase("RESTAURANT")) {
+					String currentRstrnt = rs.getString("Description");
+					String cuisine = amq.getCuisine(currentRstrnt);
+					out.print("<td>" + currentRstrnt + " (" + cuisine + ") </td>"); //retrieves name and cuisine of restaurant
+				} else {
+					out.print("<td>" + rs.getString("Description") + "</td>"); //retrieves description
+				}
+				out.print("</tr>");
+				counter++;
+			}
+
+			System.out.println("done");
+		} catch (Exception e) {
+			System.out.println("ERROR: " + e.getMessage());
+		}
+
+		out.print("</table>");
+	%>
+
 </body>
 </html>

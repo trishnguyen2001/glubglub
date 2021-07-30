@@ -9,6 +9,7 @@
 <title>AmenityOutput</title>
 </head>
 <body bgcolor="#b3e6e4">
+
 	<form action="LandingPg.jsp">
 		<br> <input type="submit" value="Home"
 			style="height: 50px; width: 150px">
@@ -37,17 +38,16 @@
 		<input type="submit" value="Back" style="height: 50px; width: 150px">
 	</form>
 
-
 	<br>
 	<%
 		AmenityQueries amq = new AmenityQueries();
+
 		String intQ = amq.intersect(amq.zoneQ(zone), amq.typeQ(type), amq.nameQ(name), amq.descQ(desc));
+		/* String intQ = amq.intersect(amq.zoneQ(zone), amq.typeQ(type), amq.descQ(desc)); */
+
 		String joinQuery = amq.join(intQ);
 		PreparedStatement stmt = amq.prepStmt(joinQuery);
 		ResultSet rs = stmt.executeQuery();
-
-		/* out.print("<table border ='1' bgcolor='ffffff'>	" + "<tr>" + "<th>#</th>" + "<th>Location</th>"
-				+ "<th>Type</th>" + "<th>Name</th>" + "<th>Description</th>" + "</tr>"); */
 
 		out.print("<table border ='1' bgcolor='ffffff'>	" + "<tr>" + "<th>#</th>" + "<th>Location</th>"
 				+ "<th>Type</th>" + "<th>Description</th>" + "</tr>");
@@ -82,7 +82,6 @@
 		}
 
 		out.print("</table>");
-
 	%>
 </body>
 </html>
