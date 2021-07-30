@@ -1,3 +1,4 @@
+DROP TABLE AmenityType;
 DROP TABLE VisitorTags;
 DROP TABLE AnimalPerformsInShow;
 DROP TABLE ZoneTours; 

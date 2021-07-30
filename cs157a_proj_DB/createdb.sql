@@ -183,7 +183,7 @@ INSERT INTO Restaurant(amenityID, rName, cuisine) VALUES ('A12', 'TONY''S BAR AN
 INSERT INTO Restaurant(amenityID, rName, cuisine) VALUES ('A13', 'STARBUCKS','COFFEE');
 INSERT INTO Restaurant(amenityID, rName, cuisine) VALUES ('A14', 'THE GARDEN THAI','THAI');
 INSERT INTO Restaurant(amenityID, rName, cuisine) VALUES ('A15', 'GUACAMOLE BLISS','MEXICAN');
-INSERT INTO Restaurant(amenityID, rName, cuisine) VALUES ('A17', 'STARBUCKS','COFFEE');
+INSERT INTO Restaurant(amenityID, rName, cuisine) VALUES ('A17', 'STARBUCKS ','COFFEE');
 
 
 CREATE TABLE Giftshop (
@@ -369,26 +369,25 @@ INSERT INTO VisitorTags(visitorID, general_name, tag_description) VALUES ('V4', 
 
 CREATE TABLE AmenityType(
     amenityID VARCHAR(3) PRIMARY KEY,
-    Amenity_type VARCHAR(25) NOT NULL,
+    amenity_type VARCHAR(25) NOT NULL,
     FOREIGN KEY (amenityID) REFERENCES Amenity(amenityID) ON DELETE CASCADE
 );
-
-INSERT INTO AmenityType(amenityID, Amenity_type) VALUES ('A1','Restroom');
-INSERT INTO AmenityType(amenityID, Amenity_type) VALUES ('A2','Restroom');
-INSERT INTO AmenityType(amenityID, Amenity_type) VALUES ('A3','Restroom');
-INSERT INTO AmenityType(amenityID, Amenity_type) VALUES ('A4','Restroom');
-INSERT INTO AmenityType(amenityID, Amenity_type) VALUES ('A5','Restroom');
-INSERT INTO AmenityType(amenityID, Amenity_type) VALUES ('A6','Restroom');
-INSERT INTO AmenityType(amenityID, Amenity_type) VALUES ('A7','Restroom');
-INSERT INTO AmenityType(amenityID, Amenity_type) VALUES ('A8','Restroom');
-INSERT INTO AmenityType(amenityID, Amenity_type) VALUES ('A9','Restroom');
-INSERT INTO AmenityType(amenityID, Amenity_type) VALUES ('A10','Restroom');
-INSERT INTO AmenityType(amenityID, Amenity_type) VALUES ('A11','Restaurant');
-INSERT INTO AmenityType(amenityID, Amenity_type) VALUES ('A12','Restaurant');
-INSERT INTO AmenityType(amenityID, Amenity_type) VALUES ('A13','Restaurant');
-INSERT INTO AmenityType(amenityID, Amenity_type) VALUES ('A14','Restaurant');
-INSERT INTO AmenityType(amenityID, Amenity_type) VALUES ('A15','Restaurant');
-INSERT INTO AmenityType(amenityID, Amenity_type) VALUES ('A16','Giftshop');
-INSERT INTO AmenityType(amenityID, Amenity_type) VALUES ('A17','Restaurant');
+INSERT INTO AmenityType(amenityID, amenity_type) VALUES ('A1', 'RESTROOM');
+INSERT INTO AmenityType(amenityID, amenity_type) VALUES ('A2', 'RESTROOM');
+INSERT INTO AmenityType(amenityID, amenity_type) VALUES ('A3', 'RESTROOM');
+INSERT INTO AmenityType(amenityID, amenity_type) VALUES ('A4', 'RESTROOM');
+INSERT INTO AmenityType(amenityID, amenity_type) VALUES ('A5', 'RESTROOM');
+INSERT INTO AmenityType(amenityID, amenity_type) VALUES ('A6', 'RESTROOM');
+INSERT INTO AmenityType(amenityID, amenity_type) VALUES ('A7', 'RESTROOM');
+INSERT INTO AmenityType(amenityID, amenity_type) VALUES ('A8', 'RESTROOM');
+INSERT INTO AmenityType(amenityID, amenity_type) VALUES ('A9', 'RESTROOM');
+INSERT INTO AmenityType(amenityID, amenity_type) VALUES ('A10', 'RESTROOM');
+INSERT INTO AmenityType(amenityID, amenity_type) VALUES ('A11', 'RESTAURANT');
+INSERT INTO AmenityType(amenityID, amenity_type) VALUES ('A12', 'RESTAURANT');
+INSERT INTO AmenityType(amenityID, amenity_type) VALUES ('A13', 'RESTAURANT');
+INSERT INTO AmenityType(amenityID, amenity_type) VALUES ('A14', 'RESTAURANT');
+INSERT INTO AmenityType(amenityID, amenity_type) VALUES ('A15', 'RESTAURANT');
+INSERT INTO AmenityType(amenityID, amenity_type) VALUES ('A16', 'GIFT SHOP');
+INSERT INTO AmenityType(amenityID, amenity_type) VALUES ('A17', 'RESTAURANT');
 
 COMMIT WORK;
