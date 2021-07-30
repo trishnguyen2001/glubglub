@@ -10,14 +10,12 @@
 	<h1 style="font-family: verdana" align="center">Welcome!</h1>
 	<!-- <img src="resources\demented_nemo.jpg" width = "800" height = "500">  -->
 	<div style="text-align: center;">
-		<img src="resources\pretty_nemo.jpg" width="800" height="500">
-
-		<br> <br> <br>
+		<img src="resources\pretty_nemo.jpg" width="800" height="500"> <br>
+		<br> <br>
 
 		<form action="AnimalInput.jsp">
 			<input type="submit" value="Browse Animals"
-				style="height: 50px; width: 150px" style="font-family:verdana"
-				>
+				style="height: 50px; width: 150px" style="font-family:verdana">
 		</form>
 		<br>
 		<form action="TourInput.jsp">
