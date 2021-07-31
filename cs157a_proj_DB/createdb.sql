@@ -183,7 +183,7 @@ INSERT INTO Restaurant(amenityID, rName, cuisine) VALUES ('A12', 'TONY''S BAR AN
 INSERT INTO Restaurant(amenityID, rName, cuisine) VALUES ('A13', 'STARBUCKS','COFFEE');
 INSERT INTO Restaurant(amenityID, rName, cuisine) VALUES ('A14', 'THE GARDEN THAI','THAI');
 INSERT INTO Restaurant(amenityID, rName, cuisine) VALUES ('A15', 'GUACAMOLE BLISS','MEXICAN');
-INSERT INTO Restaurant(amenityID, rName, cuisine) VALUES ('A17', 'STARBUCKS','COFFEE');
+INSERT INTO Restaurant(amenityID, rName, cuisine) VALUES ('A17', 'STARBUCKS ','COFFEE');
 
 
 CREATE TABLE Giftshop (
@@ -369,7 +369,7 @@ INSERT INTO VisitorTags(visitorID, general_name, tag_description) VALUES ('V4', 
 
 CREATE TABLE AmenityType(
     amenityID VARCHAR(3) PRIMARY KEY,
-    Amenity_type VARCHAR(25) NOT NULL,
+    amenity_type VARCHAR(25) NOT NULL,
     FOREIGN KEY (amenityID) REFERENCES Amenity(amenityID) ON DELETE CASCADE
 );
 
