@@ -5,26 +5,58 @@
 <!DOCTYPE html>
 <html>
 <head>
+<style>
+table, td, th {
+	border: 1px solid black;
+}
+
+table {
+	border-collapse: collapse;
+	width: 60%;
+	table-align: middle;
+}
+
+td {
+	text-align: center;
+	font-family: verdana;
+	font-size: 16px;
+}
+
+table.center {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+input[type="text"] {
+	text-family: verdana;
+}
+
+</style>
 <meta charset="ISO-8859-1">
 <title>AmenityInput</title>
 </head>
-<body bgcolor="#b3e6e4">
+<body bgcolor="#bde7fc">
 	<form action="LandingPg.jsp">
 		<br> <input type="submit" value="Home"
-			style="height: 50px; width: 150px">
+			style="height: 30px; width: 100px;">
 	</form>
 
-	<h1>Search Amenities</h1>
+	<h1 style="font-family: verdana" align="center" style="font-size: 90px">Search
+		Amenities</h1>
 
-	<form action="AmenityOutput.jsp">
-		Location: <input type="text" name="amenity_zone"> <br> <br>
-		Type: <input type="text" name="amenity_type"> <br> <br>
-		Description: <input type="text" name="amenity_descr"> <br>
-		<br> <br> <input type="submit" value="Submit"
-			style="height: 30px; width: 90px"><br> <br>
-	</form>
-
-	<h1>All Amenities</h1>
+	<div style="text-align: center">
+		<img src="resources\restaurant.jpg" width="600" height="300"> <br>
+		<br> <br>
+		<form action="AmenityOutput.jsp">
+			<b>Location:</b> <input type="text" name="amenity_zone"> 
+			<b>Type:</b> <input type="text" name="amenity_type"> 
+			<b>Description:</b> <input type="text" name="amenity_descr">
+			<input type="submit" value="Submit"
+				style="height: 30px; width: 90px">
+		</form>
+	</div>
+	<h1 style="font-family: verdana" align="center" style="font-size: 90px">All
+		Amenities</h1>
 	<%
 		AmenityQueries amq = new AmenityQueries();
 		String intQ = amq.intersect(amq.zoneQ(""), amq.typeQ(""), amq.descQ("")); //displays all amenities
@@ -33,8 +65,8 @@
 		PreparedStatement stmt = amq.prepStmt(joinQuery);
 		ResultSet rs = stmt.executeQuery();
 
-		out.print("<table border ='1' bgcolor='ffffff'>	" + "<tr>" + "<th>#</th>" + "<th>Location</th>"
-				+ "<th>Type</th>" + "<th>Description</th>" + "</tr>");
+		out.print("<table border ='1' bgcolor='ffffff' class='center'>	" + "<tr>" + "<th>#</th>"
+				+ "<th>Location</th>" + "<th>Type</th>" + "<th>Description</th>" + "</tr>");
 		try {
 			int counter = 1;
 			while (rs.next()) {

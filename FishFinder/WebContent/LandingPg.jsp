@@ -6,35 +6,32 @@
 <meta charset="ISO-8859-1">
 <title>LandingPg</title>
 </head>
-<body bgcolor="#b3e6e4">
-	<h1 style="font-family: verdana" align="center">Welcome!</h1>
+<body bgcolor="#bde7fc">
+	<h1 style="font-family: verdana" align="center" style="font-size: 90px" >Welcome!</h1>
 	<!-- <img src="resources\demented_nemo.jpg" width = "800" height = "500">  -->
 	<div style="text-align: center;">
-		<img src="resources\pretty_nemo.jpg" width="800" height="500"> <br>
+		<img src="resources\pretty_nemo.jpg" width="600" height="300"> <br>
 		<br> <br>
-
+		
 		<form action="AnimalInput.jsp">
 			<input type="submit" value="Browse Animals"
-				style="height: 50px; width: 150px" style="font-family:verdana">
+				style="height: 40px; width: 150px" style="font-family:verdana">
 		</form>
 		<br>
 		<form action="TourInput.jsp">
 			<input type="submit" value="Browse Tours"
-				style="height: 50px; width: 150px" style="font-family:verdana"
-				align="center">
+				style="height: 40px; width: 150px" style="font-family:verdana">
 		</form>
 		<br>
 		<form action="ShowInput.jsp">
 			<input type="submit" value="Browse Shows"
-				style="height: 50px; width: 150px" style="font-family:verdana"
-				align="center">
+				style="height: 40px; width: 150px" style="font-family:verdana">
 		</form>
 		<br>
 		<form action="AmenityInput.jsp">
 			<input type="submit" value="Browse Amenities"
-				style="height: 50px; width: 150px" style="font-family:verdana"
-				align="center">
-		</form>
+				style="height: 40px; width: 150px" style="font-family:verdana">
+		</form> 
 		<br>
 	</div>
 

@@ -5,73 +5,92 @@
 <!DOCTYPE html>
 <html>
 <head>
+<style>
+table, td, th {
+	border: 1px solid black;
+}
+
+table {
+	border-collapse: collapse;
+	width: 90%;
+	table-align: middle;
+}
+
+td {
+	text-align: center;
+	font-family: verdana;
+	font-size: 16px;
+}
+
+table.center {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+input[type="text"] {
+	text-family: verdana;
+}
+
+</style>
 <meta charset="ISO-8859-1">
 <title>Show Input</title>
 </head>
-<body bgcolor = "#b3e6e4">
+<body bgcolor="#bde7fc">
 	<form action="LandingPg.jsp">
-		<br> <input type="submit" value="Home"  style="height:50px; width:150px">
+		<br> <input type="submit" value="Home"
+			style="height: 30px; width: 100px;">
 	</form>
 
-	<h1>Search Shows</h1>
 
-	<form action="ShowOutput.jsp">
-		<b>Name: </b> <input type="text" name="showName"> <br> <br>
-		<b>Time: </b> <input type="text" name="showTime"><br> <br>
-		<b>Show Animals: </b> <input type="text" name="showAnimal"><br> <br>
-		<input type="submit" value="Submit"  style="height:30px; width:90px">
-	</form>
+	<div style="text-align: center">
+		<h1 style="font-family: verdana" align="center" style="font-size: 90px">Search Shows</h1>
+		
+		<img src="resources\dolphin_show.jpg" width="600" height="300">
+		<br> <br> <br>
 
-	<h1>All Shows</h1>
+		<form action="ShowOutput.jsp">
+			<b>Name: </b> <input type="text" name="showName"> <b>Time:
+			</b> <input type="text" name="showTime"> <b>Show Animals: </b> <input
+				type="text" name="showAnimal"> <input type="submit"
+				value="Submit" style="height: 30px; width: 90px">
+		</form>
 
-	<%
-		String show_name = request.getParameter("showName");
-		String show_time = request.getParameter("showTime");
-		String show_animal = request.getParameter("showAnimal");
+		<h1 style="font-family: verdana" align="center" style="font-size: 90px">All Shows</h1>
 
-		out.print("<table border ='1' bgcolor='ffffff'>	" + "<tr>" + "<th>#</th>" + "<th>Show Name</th>" + "<th>Time</th>"
-				+ "<th>Show Animals</th>" + "</tr>");
-		ShowQueries sq = new ShowQueries();
-		ResultSet rs = sq.intersection(sq.showNameQuery(""), sq.timeQuery(""), sq.showAnimalQuery(""));
+		<%
+			String show_name = request.getParameter("showName");
+			String show_time = request.getParameter("showTime");
+			String show_animal = request.getParameter("showAnimal");
 
-		try {
-			int counter = 1;
-			//FORMATTING:
-			//String current = rs.getString("sName");
-			while (rs.next()) {
+			out.print("<table border ='1' bgcolor='ffffff' class='center'>	" + "<tr>" + "<th>#</th>"
+					+ "<th>Show Name</th>" + "<th>Time</th>" + "<th>Show Animals</th>" + "</tr>");
+			ShowQueries sq = new ShowQueries();
+			ResultSet rs = sq.intersection(sq.showNameQuery(""), sq.timeQuery(""), sq.showAnimalQuery(""));
 
-				out.print("<tr>");
-				out.print("<td> " + counter + " </td>"); 								//result counter
-				//out.print("<td>" + current + "</td>"); 								//FORMATTING:retrieves show name 
-				out.print("<td>" + rs.getString("sName") + "</td>");					//retrieves show name
-				out.print("<td>" + rs.getString("time") + "</td>"); 					//retrieves show time
-				out.print("<td>" + rs.getString("general_name") + "</td>"); 				//retrieves zones passed through
-				
-				//FORMATTING: retrieves zones passed through
-				/* out.print("<td>");
-				String next = rs.getString("tName");
-				System.out.println("current = " + current);
-				System.out.println("next = " + next);
-				while(next.equals(current)){
-					out.print(rs.getString("zoneID") + "<br>");
-					current = next;
-					next = rs.getString("tName");
+			try {
+				int counter = 1;
+				//FORMATTING:
+				//String current = rs.getString("sName");
+				while (rs.next()) {
+
+					out.print("<tr>");
+					out.print("<td> " + counter + " </td>"); //result counter
+					out.print("<td>" + rs.getString("sName") + "</td>"); //retrieves show name
+					out.print("<td>" + rs.getString("time") + "</td>"); //retrieves show time
+					out.print("<td>" + rs.getString("general_name") + "</td>"); //retrieves zones passed through
+
+					out.print("</tr>");
+
+					counter++;
 				}
-				out.print("</td>");  */
-				
-				
-				out.print("</tr>");	
-	
-				counter++;
+
+				System.out.println("done");
+			} catch (Exception e) {
+				System.out.println("ERROR: " + e.getMessage());
 			}
-
-			System.out.println("done");
-		} catch (Exception e) {
-			System.out.println("ERROR: " + e.getMessage());
-		}
-		out.print("</table>");
-	%>
-
+			out.print("</table>");
+		%>
+	</div>
 
 </body>
 </html>
