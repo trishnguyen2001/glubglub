@@ -47,54 +47,13 @@ INSERT INTO Zone(zoneID, zone_name) VALUES ('Z4', 'Open Ocean');
 INSERT INTO Zone(zoneID, zone_name) VALUES ('Z5', 'Estuaries');
 INSERT INTO Zone(zoneID, zone_name) VALUES ('Z6', 'Soft Bottoms');
 
-CREATE TABLE HabitatInZone(
-habitatID VARCHAR2(3),
-zoneID VARCHAR(3),
-PRIMARY KEY(habitatID, zoneID),
-FOREIGN KEY(zoneID) REFERENCES Zone(zoneID) ON DELETE CASCADE);
-INSERT INTO HabitatInZone(habitatID, zoneID) VALUES ('H1', 'Z1');
-INSERT INTO HabitatInZone(habitatID, zoneID) VALUES ('H2', 'Z1');
-INSERT INTO HabitatInZone(habitatID, zoneID) VALUES ('H3', 'Z1');
-INSERT INTO HabitatInZone(habitatID, zoneID) VALUES ('H4', 'Z1');
-INSERT INTO HabitatInZone(habitatID, zoneID) VALUES ('H5', 'Z1');
-INSERT INTO HabitatInZone(habitatID, zoneID) VALUES ('H6', 'Z2');
-INSERT INTO HabitatInZone(habitatID, zoneID) VALUES ('H7', 'Z2');
-INSERT INTO HabitatInZone(habitatID, zoneID) VALUES ('H8', 'Z2');
-INSERT INTO HabitatInZone(habitatID, zoneID) VALUES ('H9', 'Z2');
-INSERT INTO HabitatInZone(habitatID, zoneID) VALUES ('H10', 'Z2');
-INSERT INTO HabitatInZone(habitatID, zoneID) VALUES ('H11', 'Z3');
-INSERT INTO HabitatInZone(habitatID, zoneID) VALUES ('H12', 'Z3');
-INSERT INTO HabitatInZone(habitatID, zoneID) VALUES ('H13', 'Z3');
-INSERT INTO HabitatInZone(habitatID, zoneID) VALUES ('H14', 'Z3');
-INSERT INTO HabitatInZone(habitatID, zoneID) VALUES ('H15', 'Z3');
-INSERT INTO HabitatInZone(habitatID, zoneID) VALUES ('H16', 'Z3');
-INSERT INTO HabitatInZone(habitatID, zoneID) VALUES ('H17', 'Z4');
-INSERT INTO HabitatInZone(habitatID, zoneID) VALUES ('H18', 'Z4');
-INSERT INTO HabitatInZone(habitatID, zoneID) VALUES ('H19', 'Z4');
-INSERT INTO HabitatInZone(habitatID, zoneID) VALUES ('H20', 'Z4');
-INSERT INTO HabitatInZone(habitatID, zoneID) VALUES ('H21', 'Z4');
-INSERT INTO HabitatInZone(habitatID, zoneID) VALUES ('H22', 'Z5');
-INSERT INTO HabitatInZone(habitatID, zoneID) VALUES ('H23', 'Z5');
-INSERT INTO HabitatInZone(habitatID, zoneID) VALUES ('H24', 'Z5');
-INSERT INTO HabitatInZone(habitatID, zoneID) VALUES ('H25', 'Z5');
-INSERT INTO HabitatInZone(habitatID, zoneID) VALUES ('H26', 'Z5');
-INSERT INTO HabitatInZone(habitatID, zoneID) VALUES ('H27', 'Z5');
-INSERT INTO HabitatInZone(habitatID, zoneID) VALUES ('H28', 'Z1');
-INSERT INTO HabitatInZone(habitatID, zoneID) VALUES ('H29', 'Z1');
-INSERT INTO HabitatInZone(habitatID, zoneID) VALUES ('H30', 'Z4');
-INSERT INTO HabitatInZone(habitatID, zoneID) VALUES ('H31', 'Z4');
-INSERT INTO HabitatInZone(habitatID, zoneID) VALUES ('H32', 'Z6');
-INSERT INTO HabitatInZone(habitatID, zoneID) VALUES ('H33', 'Z6');
-INSERT INTO HabitatInZone(habitatID, zoneID) VALUES ('H34', 'Z6');
-INSERT INTO HabitatInZone(habitatID, zoneID) VALUES ('H35', 'Z6');
-
 CREATE TABLE AnimalInsideZone(
 general_name VARCHAR(50), 
 habitatID VARCHAR2(3),
 zoneID VARCHAR(3),
 PRIMARY KEY(general_name, habitatID, zoneID),
 FOREIGN KEY(general_name) REFERENCES Animal(general_name) ON DELETE CASCADE,
-FOREIGN KEY(habitatID, zoneID) REFERENCES HabitatInZone(habitatID, zoneID) ON DELETE CASCADE
+FOREIGN KEY(zoneID) REFERENCES Zone(zoneID) ON DELETE CASCADE
 );
 INSERT INTO AnimalInsideZone(general_name, habitatID, zoneID) VALUES ('BLUE TANG', 'H1', 'Z1');
 INSERT INTO AnimalInsideZone(general_name, habitatID, zoneID) VALUES ('GREEN SEA TURTLE', 'H2', 'Z1');
@@ -368,11 +327,11 @@ INSERT INTO VisitorTags(visitorID, general_name, tag_description) VALUES ('V1', 
 INSERT INTO VisitorTags(visitorID, general_name, tag_description) VALUES ('V4', 'PACIFIC HALIBUT', 'COOL');
 
 CREATE TABLE AmenityType(
-    amenityID VARCHAR(3) PRIMARY KEY,
+    amenityID VARCHAR(3) NOT NULL,
     amenity_type VARCHAR(25) NOT NULL,
+	PRIMARY KEY(amenityID, amenity_type),
     FOREIGN KEY (amenityID) REFERENCES Amenity(amenityID) ON DELETE CASCADE
 );
-
 INSERT INTO AmenityType(amenityID, amenity_type) VALUES ('A1', 'RESTROOM');
 INSERT INTO AmenityType(amenityID, amenity_type) VALUES ('A2', 'RESTROOM');
 INSERT INTO AmenityType(amenityID, amenity_type) VALUES ('A3', 'RESTROOM');
