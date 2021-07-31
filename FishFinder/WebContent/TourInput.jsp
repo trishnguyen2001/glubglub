@@ -13,7 +13,7 @@
 		<br> <input type="submit" value="Home"  style="height:50px; width:150px">
 	</form>
 
-	<h1>Search</h1>
+	<h1>Search Tours</h1>
 
 	<form action="TourOutput.jsp">
 		<b>Name: </b> <input type="text" name="tourName"> <br> <br>

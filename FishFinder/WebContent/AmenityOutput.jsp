@@ -22,13 +22,12 @@
 	<%
 		String zone = request.getParameter("amenity_zone");
 		String type = request.getParameter("amenity_type");
-		String name = request.getParameter("amenity_name");
-		String desc = request.getParameter("amenity_description");
+		String desc = request.getParameter("amenity_descr");
 
 		System.out.println("NEW OUTPUT");
 		out.print("ZONE: " + zone + "</br></br>");
 		out.print("TYPE: " + type + "</br></br>");
-		out.print("NAME: " + name + "</br></br>");
+		/* out.print("NAME: " + name + "</br></br>"); */
 		out.print("DESCRIPTION: " + desc + "</br></br>");
 	%>
 
@@ -42,8 +41,8 @@
 	<%
 		AmenityQueries amq = new AmenityQueries();
 
-		String intQ = amq.intersect(amq.zoneQ(zone), amq.typeQ(type), amq.nameQ(name), amq.descQ(desc));
-		/* String intQ = amq.intersect(amq.zoneQ(zone), amq.typeQ(type), amq.descQ(desc)); */
+		/* String intQ = amq.intersect(amq.zoneQ(zone), amq.typeQ(type), amq.nameQ(name), amq.descQ(desc)); */
+		String intQ = amq.intersect(amq.zoneQ(zone), amq.typeQ(type), amq.descQ(desc)); 
 
 		String joinQuery = amq.join(intQ);
 		PreparedStatement stmt = amq.prepStmt(joinQuery);
@@ -54,7 +53,6 @@
 		try {
 			int counter = 1;
 			while (rs.next()) {
-				System.out.println("ROW START");
 				out.print("<tr>");
 				out.print("<td> " + counter + " </td>"); //result counter
 				out.print("<td>" + rs.getString("location") + "</td>"); //retrieves zone 
@@ -62,8 +60,6 @@
 				String currentType = rs.getString("amenity_type");
 				out.print("<td>" + currentType + "</td>"); //retrieves amenity type
 
-				//out.print("<td>" + rs.getString("amenity_type") + "</td>"); //retrieves amenity type
-				//out.print("<td>" + rs.getString("rName") + "</td>"); //retrieves name or restaurant
 				if (currentType.equalsIgnoreCase("RESTAURANT")) {
 					String currentRstrnt = rs.getString("Description");
 					String cuisine = amq.getCuisine(currentRstrnt);
@@ -73,7 +69,6 @@
 				}
 				out.print("</tr>");
 				counter++;
-				System.out.println("ROW END");
 			}
 
 			System.out.println("done");

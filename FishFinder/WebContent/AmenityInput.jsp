@@ -14,23 +14,21 @@
 			style="height: 50px; width: 150px">
 	</form>
 
-	<h1>Search</h1>
+	<h1>Search Amenities</h1>
 
 	<form action="AmenityOutput.jsp">
 		Location: <input type="text" name="amenity_zone"> <br> <br>
 		Type: <input type="text" name="amenity_type"> <br> <br>
-		Name: <input type="text" name="amenity_name"> <br> <br>
-		Description: <input type="text" name="amenity_descr"> <br> <br>
-		<br> <input type="submit" value="Submit"
+		Description: <input type="text" name="amenity_descr"> <br>
+		<br> <br> <input type="submit" value="Submit"
 			style="height: 30px; width: 90px"><br> <br>
 	</form>
 
+	<h1>All Amenities</h1>
 	<%
-
 		AmenityQueries amq = new AmenityQueries();
-		String intQ = amq.intersect(amq.zoneQ(""), amq.typeQ(""), amq.nameQ(""), amq.descQ(""));
-		/* String intQ = amq.intersect(amq.zoneQ(""), amq.typeQ(""), amq.descQ("")); */
-		
+		String intQ = amq.intersect(amq.zoneQ(""), amq.typeQ(""), amq.descQ("")); //displays all amenities
+
 		String joinQuery = amq.join(intQ);
 		PreparedStatement stmt = amq.prepStmt(joinQuery);
 		ResultSet rs = stmt.executeQuery();
@@ -40,7 +38,6 @@
 		try {
 			int counter = 1;
 			while (rs.next()) {
-				System.out.println("ROW START: " + counter);
 				out.print("<tr>");
 				out.print("<td> " + counter + " </td>"); //result counter
 				out.print("<td>" + rs.getString("location") + "</td>"); //retrieves zone 
@@ -48,8 +45,6 @@
 				String currentType = rs.getString("amenity_type");
 				out.print("<td>" + currentType + "</td>"); //retrieves amenity type
 
-				//out.print("<td>" + rs.getString("amenity_type") + "</td>"); //retrieves amenity type
-				//out.print("<td>" + rs.getString("rName") + "</td>"); //retrieves name or restaurant
 				if (currentType.equalsIgnoreCase("RESTAURANT")) {
 					String currentRstrnt = rs.getString("Description");
 					String cuisine = amq.getCuisine(currentRstrnt);

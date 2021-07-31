@@ -13,7 +13,7 @@
 		<br> <input type="submit" value="Home"  style="height:50px; width:150px">
 	</form>
 
-	<h1>Search</h1>
+	<h1>Search Animals</h1>
 
 	<form action="AnimalOutput.jsp">
 		<b>Zone: </b> <input type="text" name="zone"> <br> <br>
