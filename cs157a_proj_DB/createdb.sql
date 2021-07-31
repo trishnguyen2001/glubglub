@@ -183,7 +183,7 @@ INSERT INTO Restaurant(amenityID, rName, cuisine) VALUES ('A12', 'TONY''S BAR AN
 INSERT INTO Restaurant(amenityID, rName, cuisine) VALUES ('A13', 'STARBUCKS','COFFEE');
 INSERT INTO Restaurant(amenityID, rName, cuisine) VALUES ('A14', 'THE GARDEN THAI','THAI');
 INSERT INTO Restaurant(amenityID, rName, cuisine) VALUES ('A15', 'GUACAMOLE BLISS','MEXICAN');
-INSERT INTO Restaurant(amenityID, rName, cuisine) VALUES ('A17', 'STARBUCKS ','COFFEE');
+INSERT INTO Restaurant(amenityID, rName, cuisine) VALUES ('A17', 'STARBUCKS','COFFEE');
 
 
 CREATE TABLE Giftshop (
@@ -215,22 +215,22 @@ INSERT INTO Employee(employeeID, eName) VALUES ('E14','Mark');
 CREATE TABLE Tour (
 tourID VARCHAR(2) PRIMARY KEY,
 tName VARCHAR(30) NOT NULL,
-time VARCHAR(10) NOT NULL
+tTime VARCHAR(10) NOT NULL
 );
-INSERT INTO Tour(tourID, tName, time) VALUES ('T1', 'FISH AROUND THE WORLD', '10:00 AM');
-INSERT INTO Tour(tourID, tName, time) VALUES ('T2', 'CLOSE TO SHORE', '11:00 AM');
-INSERT INTO Tour(tourID, tName, time) VALUES ('T3', 'SHARK TANK', '3:00 PM');
-INSERT INTO Tour(tourID, tName, time) VALUES ('T4', 'SHARK TANK', '11:00 AM');
+INSERT INTO Tour(tourID, tName, tTime) VALUES ('T1', 'FISH AROUND THE WORLD', '10:00 AM');
+INSERT INTO Tour(tourID, tName, tTime) VALUES ('T2', 'CLOSE TO SHORE', '11:00 AM');
+INSERT INTO Tour(tourID, tName, tTime) VALUES ('T3', 'SHARK TANK', '3:00 PM');
+INSERT INTO Tour(tourID, tName, tTime) VALUES ('T4', 'SHARK TANK', '11:00 AM');
 
 CREATE TABLE LiveShow (
 liveshowID VARCHAR(3) PRIMARY KEY,
 sName VARCHAR(20) NOT NULL,
-time VARCHAR(7) NOT NULL
+sTime VARCHAR(7) NOT NULL
 );
-INSERT INTO LiveShow(liveshowID, sName, time) VALUES ('LS1', 'PENGUIN FEEDING', '1:00 PM');
-INSERT INTO LiveShow(liveshowID, sName, time) VALUES ('LS2', 'STINGRAY PETTING ZOO', '2:00 PM');
-INSERT INTO LiveShow(liveshowID, sName, time) VALUES ('LS3', 'DOLPHIN SHOW', '3:00 PM');
-INSERT INTO LiveShow(liveshowID, sName, time) VALUES ('LS4', 'DOLPHIN SHOW', '1:00 PM');
+INSERT INTO LiveShow(liveshowID, sName, sTime) VALUES ('LS1', 'PENGUIN FEEDING', '1:00 PM');
+INSERT INTO LiveShow(liveshowID, sName, sTime) VALUES ('LS2', 'STINGRAY PETTING ZOO', '2:00 PM');
+INSERT INTO LiveShow(liveshowID, sName, sTime) VALUES ('LS3', 'DOLPHIN SHOW', '3:00 PM');
+INSERT INTO LiveShow(liveshowID, sName, sTime) VALUES ('LS4', 'DOLPHIN SHOW', '1:00 PM');
 
 CREATE TABLE TourGuide(
 tourID VARCHAR2(3), 
@@ -369,9 +369,10 @@ INSERT INTO VisitorTags(visitorID, general_name, tag_description) VALUES ('V4', 
 
 CREATE TABLE AmenityType(
     amenityID VARCHAR(3) PRIMARY KEY,
-    amenity_type VARCHAR(25) NOT NULL,
+    Amenity_type VARCHAR(25) NOT NULL,
     FOREIGN KEY (amenityID) REFERENCES Amenity(amenityID) ON DELETE CASCADE
 );
+
 INSERT INTO AmenityType(amenityID, amenity_type) VALUES ('A1', 'RESTROOM');
 INSERT INTO AmenityType(amenityID, amenity_type) VALUES ('A2', 'RESTROOM');
 INSERT INTO AmenityType(amenityID, amenity_type) VALUES ('A3', 'RESTROOM');
