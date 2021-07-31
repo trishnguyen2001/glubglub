@@ -9,15 +9,8 @@ public class TourQueries {
 	
 	public TourQueries() {
 		try {
-			String host = "localhost";
-			String dbName = "xe";
-			int port = 1521;
-			String oracleURL = "jdbc:oracle:thin:@" + host + ":" + port + ":" + dbName;
-			String username = "system";
-			String password = "Oracle.com0709";
-
 			Class.forName("oracle.jdbc.driver.OracleDriver");
-			con = DriverManager.getConnection(oracleURL, username, password);
+			con = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe", "system", "newOracle");
 			stmt = con.createStatement();
 
 		} catch (Exception e) {
@@ -44,7 +37,7 @@ public class TourQueries {
 			return "SELECT T.tourID FROM Tour T";	
 		}
 		
-		return "SELECT T.tourID FROM Tour T WHERE T.time LIKE '%" + time + "%'";	
+		return "SELECT T.tourID FROM Tour T WHERE T.tTime LIKE '%" + time + "%'";	
 	}
 	
 	public String zoneQuery(String zone) {
@@ -59,6 +52,8 @@ public class TourQueries {
 		return "SELECT T.tourID FROM Tour T, ZoneTours ZT WHERE ZT.zoneID = '" + zone + "' AND T.tourID = ZT.tourID";	
 	}
 	
+	
+	/*
 	//output display --> formats and shows records returned by intersecting of all query
 	public ResultSet intersection(String nq, String tq, String zq) throws SQLException {
 		return stmt.executeQuery(	"SELECT T.tourID AS TourID, T.tName AS Tour_Name, T.time AS Tour_Time, LISTAGG(zoneID, ', ') " + 
@@ -70,7 +65,25 @@ public class TourQueries {
 									"ORDER BY T.tourID" 
 								);
 	}
+	*/
 	
+	
+	// NEW method
+	//output display --> formats and shows records returned by intersecting of all query
+	public ResultSet intersection(String nq, String tq, String zq) throws SQLException {
+		return stmt.executeQuery("SELECT T.tourid, T.tname AS Tour_Name, "
+				+ "REGEXP_REPLACE(CONCAT(' ', LISTAGG(E.ename, ', ') WITHIN GROUP (ORDER BY E.employeeid)), '([^,]+)(,\\1)+','\\1') AS Tour_Guides, "
+				+ "T.ttime AS Tour_Time, "
+				+ "REGEXP_REPLACE(CONCAT(' ', LISTAGG(zoneID, ', ') WITHIN GROUP (ORDER BY zoneID)), '([^,]+)(,\\1)+','\\1') AS Zones "
+				+ "FROM Tour T, ZoneTours ZT, TourGuide TG, Employee E "
+				+ "WHERE T.tourid=ZT.tourid AND T.tourid=TG.tourid AND TG.employeeid=E.employeeid AND T.tourID IN ((" + nq + ") INTERSECT (" + tq + ") INTERSECT (" + zq + ")) "
+				+ "GROUP BY T.tourid, T.tname, T.ttime" 
+			);
+	}
+	
+	
+	
+	/*
 	//input display --> formats and shows all records
 	public ResultSet tourInputDisplay() throws SQLException {
 		return stmt.executeQuery( "SELECT T.tourID AS TourID, T.tName AS Tour_Name, T.time AS Tour_Time, LISTAGG(zoneID, ', ') WITHIN GROUP (ORDER BY zoneID) AS Zone_Listing "
@@ -81,6 +94,24 @@ public class TourQueries {
 				);
 
 		}
+	*/
+	
+	// NEW method
+	//input display --> formats and shows all records
+	public ResultSet tourInputDisplay() throws SQLException {
+		return stmt.executeQuery("SELECT T.tourid, T.tname AS Tour_Name, "
+				+ "REGEXP_REPLACE(CONCAT(' ', LISTAGG(E.ename, ', ') WITHIN GROUP (ORDER BY E.employeeid)), '([^,]+)(,\\1)+','\\1') AS Tour_Guides, "
+				+ "T.ttime AS Tour_Time, "
+				+ "REGEXP_REPLACE(CONCAT(' ', LISTAGG(zoneID, ', ') WITHIN GROUP (ORDER BY zoneID)), '([^,]+)(,\\1)+','\\1') AS Zones "
+				+ "FROM Tour T, ZoneTours ZT, TourGuide TG, Employee E "
+				+ "WHERE T.tourid=ZT.tourid AND T.tourid=TG.tourid AND TG.employeeid=E.employeeid "
+				+ "GROUP BY T.tourid, T.tname, T.ttime" 
+			);
+
+	}
+	
+	
+	
 
 
 }
