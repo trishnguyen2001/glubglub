@@ -24,7 +24,6 @@ public class AmenityQueries {
 			con2 = DriverManager.getConnection(oracleURL, userName, password);
 			
 			insertCuisine();
-			System.out.println("AMQ: ctor: inserting cuisines");
 			
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -49,20 +48,8 @@ public class AmenityQueries {
 		return "SELECT Amenity.amenityID FROM Amenity WHERE location = '"+data+"' ";
 	}
 
-	public String nameQ(String data) {
-		System.out.println("nq");
-		if(data == null || data.equals("")) {
-			return "SELECT Amenity.amenityID from Amenity ";
-		}
-		else if(data.contains("'")) {
-			data = "Tony''s";
-		}
-		data = data.toUpperCase();
-		return "SELECT Restaurant.amenityID FROM Restaurant WHERE rName LIKE '%" + data + "%' OR cuisine LIKE '%" + data + "%' ";
-	}
-
 	public String descQ(String data) {
-		System.out.println("dq");
+		System.out.println("AMQ: descQ: " +  data );
 		if(data == null || data.equals("")) {
 			return "SELECT Amenity.amenityID from Amenity ";
 		}
@@ -72,31 +59,13 @@ public class AmenityQueries {
 		}
 		else if(data.contentEquals("$$")) {
 			data = data.toUpperCase();
-			return "SELECT Giftshop.amenityID FROM Giftshop WHERE price_range = '"+data+"' ";
+			return "SELECT Giftshop.amenityID FROM Giftshop WHERE price_range = '" + data + "' ";
 		}
 		else {
 			data = data.toUpperCase();
-			return "SELECT Restaurant.amenityID FROM Restaurant WHERE cuisine LIKE '%"+data+"%' ";
+			return "SELECT amenityID FROM Restaurant WHERE rName LIKE '%" + data + "%' OR cuisine LIKE '%" + data + "%' ";
 		}
 	}
-	
-//	public String descQ(String data) {
-//		if(data == null || data.equals("")) {
-//			return "SELECT Amenity.amenityID from Amenity ";
-//		}
-//		else if(data.equals("M")|| (data.equals("F"))){
-//			data = data.toUpperCase();
-//			return "SELECT Restroom.amenityID FROM Restroom WHERE gender = '" + data + "' ";
-//		}
-//		else if(data.contentEquals("$$")) {
-//			data = data.toUpperCase();
-//			return "SELECT Giftshop.amenityID FROM Giftshop WHERE price_range = '" + data + "' ";
-//		}
-//		else {
-//			data = data.toUpperCase();
-//			return "SELECT amenityID FROM Restaurant WHERE rName LIKE '%" + data + "%' ";
-//		}
-//	}
 
 	public String typeQ(String data) {
 		if(data == null || data.equals("")) {
@@ -115,23 +84,16 @@ public class AmenityQueries {
 			String rest = rs.getString("rName");
 			String cuisine = rs.getString("cuisine");
 			rstrntOut.put(rest, cuisine);
-			System.out.println("AMQ: insertCuisine(): <" + rest + ", " + cuisine + ">");
-			System.out.println("AMQ: insertCuisine(): check: <" + rest + ", " + rstrntOut.get(rest) + ">");
 		}
 	}
 	
 	public String getCuisine(String rName) throws SQLException{
-		System.out.println("AMQ: getCuisine(): <" + rName + ", " + rstrntOut.get(rName) + ">");
 		return rstrntOut.get(rName);
 	}
-
-	public String intersect(String zone,String type,String name ,String desc) {
-		return "(" + zone + ") INTERSECT (" + type + ") INTERSECT (" + name + ") INTERSECT (" + desc + ")";
-	}
 	
-//	public String intersect(String zone, String type, String desc) {
-//		return "(" + zone + ") INTERSECT (" + type + ") INTERSECT (" + desc + ")";
-//	}
+	public String intersect(String zone, String type, String desc) {
+		return "(" + zone + ") INTERSECT (" + type + ") INTERSECT (" + desc + ")";
+	}
 
 	public String join(String intersectQuery) {
 		return "(SELECT A.location, AT.amenity_type, R.rName AS DESCRIPTION "

@@ -9,10 +9,6 @@ public class TourQueries {
 	
 	public TourQueries() {
 		try {
-//			Class.forName("oracle.jdbc.driver.OracleDriver");
-//			con = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe", "system", "Oracle.com0709");
-//			stmt = con.createStatement();
-
 			String host = "localhost";
 			String dbName = "xe";
 			int port = 1521;
