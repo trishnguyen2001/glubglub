@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 <%@ page
-	import="java.io.IOException, java.sql.*, queries.AnimalQueries, java.util.*"%>
+	import="java.io.IOException, java.sql.*, Queries.AnimalQueries, java.util.*"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -66,10 +66,10 @@ input[type="text"] {
 
 	<div class="row">
 		<div class="column1">
-			<p style="font-family: verdana; font-size: 16px;">[Name]: <% out.print(animal_name); %></p>
-			<p style="font-family: verdana; font-size: 16px;">[Zone]: <% out.print(zone); %></p>
-			<p style="font-family: verdana; font-size: 16px;">[Habitat]: <% out.print(habitat); %></p>
-			<p style="font-family: verdana; font-size: 16px;">[Tag]: <% out.print(tag); %></p>
+			<p style="font-family: verdana; font-size: 16px;"><b>[Name]:</b> <% out.print(animal_name); %></p>
+			<p style="font-family: verdana; font-size: 16px;"><b>[Zone]:</b> <% out.print(zone); %></p>
+			<p style="font-family: verdana; font-size: 16px;"><b>[Habitat]:</b> <% out.print(habitat); %></p>
+			<p style="font-family: verdana; font-size: 16px;"><b>[Tag]:</b> <% out.print(tag); %></p>
 		</div>
 	</div>
 

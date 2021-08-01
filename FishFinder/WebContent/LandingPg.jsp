@@ -29,7 +29,7 @@
 <body bgcolor="#bde7fc">
 	<h1 style="font-family: verdana; font-size: 50px" align="center"" >Welcome!</h1>
 	
-	<img src="resources\pretty_nemo.jpg" width = "800" height = "500" class="center"> 
+	<img src="resources\pretty_nemo.jpg" width = "800" height = "400" class="center"> 
 		<!-- <img src="resources\pretty_nemo.jpg" width = "800" height = "500"> -->
 	
 	<div class="row">

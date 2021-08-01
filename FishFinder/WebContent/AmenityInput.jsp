@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 <%@page
-	import="java.io.IOException, java.sql.*, queries.AmenityQueries, java.util.*"%>
+	import="java.io.IOException, java.sql.*, Queries.AmenityQueries, java.util.*"%>
 <!DOCTYPE html>
 <html>
 <head>

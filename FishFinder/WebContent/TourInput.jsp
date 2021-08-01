@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 <%@ page
-	import="java.sql.*, queries.TourQueries, java.util.*, java.io.IOException"%>
+	import="java.sql.*, Queries.TourQueries, java.util.*, java.io.IOException"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,28 +9,23 @@
 table, td, th {
 	border: 1px solid black;
 }
-
 table {
 	border-collapse: collapse;
 	width: 180%;
 	table-align: middle;
 }
-
 td {
 	text-align: center;
 	font-family: verdana;
 	font-size: 16px;
 }
-
 table.center {
 	margin-left: auto;
 	margin-right: auto;
 }
-
 input[type="text"] {
 	text-family: verdana;
 }
-
 .row {
 	display: flex;
 	flex-direction: row;
@@ -39,12 +34,10 @@ input[type="text"] {
 	width: 100%;
 	justify-content: flex-start;
 }
-
 .column1 {
 	margin-left: 10px;
 	flex-direction: column;
 }
-
 .column2 {
 	margin-left:30px;
 	margin-top: auto;
@@ -87,7 +80,6 @@ input[type="text"] {
 				+ "<th>Time</th>" + "<th>Zone</th>" + "</tr>");
 				TourQueries tq = new TourQueries();
 				ResultSet rs = tq.tourInputDisplay();
-
 				try {
 					int counter = 1;
 					while (rs.next()) {
@@ -98,10 +90,8 @@ input[type="text"] {
 						out.print("<td>" + rs.getString("Tour_Guides") + "</td>"); //retrieves Tour Guide name (Employee name)
 						out.print("<td>" + rs.getString("Tour_Time") + "</td>"); //retrieves Tour Time
 						out.print("<td>" + rs.getString("Zones") + "</td></tr>"); // lists all the zones for each Tour
-
 						counter++;
 					}
-
 					System.out.println("done");
 				} catch (Exception e) {
 					System.out.println("ERROR: " + e.getMessage());

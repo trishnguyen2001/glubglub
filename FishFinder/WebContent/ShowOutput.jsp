@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 <%@ page
-	import="java.io.IOException, java.sql.*, queries.ShowQueries, java.util.*"%>
+	import="java.io.IOException, java.sql.*, Queries.ShowQueries, java.util.*"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -65,9 +65,9 @@ input[type="text"] {
 
 	<div class="row">
 		<div class="column1">
-			<p style="font-family: verdana; font-size: 16px;">[Name]: <% out.print(show_name); %></p>
-			<p style="font-family: verdana; font-size: 16px;">[Time]: <% out.print(show_time); %></p>
-			<p style="font-family: verdana; font-size: 16px;">[Show Animal]: <% out.print(show_animal); %></p>
+			<p style="font-family: verdana; font-size: 16px;"><b>[Name]:</b> <% out.print(show_name); %></p>
+			<p style="font-family: verdana; font-size: 16px;"><b>[Time]:</b> <% out.print(show_time); %></p>
+			<p style="font-family: verdana; font-size: 16px;"><b>[Show Animal]:</b> <% out.print(show_animal); %></p>
 		</div>
 	</div>
 
