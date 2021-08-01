@@ -8,15 +8,21 @@ public class ShowQueries{
 
 	public ShowQueries() {
 		try {
+			String host = "localhost";
+			String dbName = "xe";
+			int port = 1521;
+			String oracleURL = "jdbc:oracle:thin:@" + host + ":" + port + ":" + dbName;
+			String username = "system";
+			String password = "Oracle.com0709";
+
 			Class.forName("oracle.jdbc.driver.OracleDriver");
-			con = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe", "system", "newOracle");
+			con = DriverManager.getConnection(oracleURL, username, password);
 			stmt = con.createStatement();
 
 		} catch (Exception e) {
 			System.out.println("ERROR: " + e.getMessage());
 		}	
 	}
-
 	public String showNameQuery(String showName) {
 		System.out.println("EXECUTING: showNameQuery");
 
@@ -49,24 +55,7 @@ public class ShowQueries{
 		animal = animal.toUpperCase();
 		return "SELECT L.liveshowID FROM LiveShow L, AnimalPerformsInShow APIS WHERE APIS.general_name LIKE '%" + animal + "%' AND L.liveshowID = APIS.liveshowID";	
 	}
-
-
 	
-	/*
-	public ResultSet intersection(String nq, String tq, String aq) throws SQLException {
-		return stmt.executeQuery(	"SELECT L.sName, L.sTime, APIS.general_name " + 
-				"FROM LiveShow L, AnimalPerformsInShow APIS " +
-				"WHERE L.liveshowID IN ((" + nq + ") INTERSECT (" + tq + ") INTERSECT (" + aq + ")) " +  
-				"AND L.liveshowID = APIS.liveshowID " +
-				"ORDER BY L.liveshowID" 
-				);
-	}
-	*/
-	
-
-	
-	
-	// NEW method
 	//output display --> formats and shows records returned by intersecting of all query
 	public ResultSet intersection(String nq, String tq, String zq) throws SQLException {
 		return stmt.executeQuery("SELECT  LS.liveshowid, LS.sname AS Show_Name, "
@@ -78,8 +67,5 @@ public class ShowQueries{
 				+ "ORDER BY LS.liveshowid" 
 			);
 	}
-	
+
 }
-
-
-
